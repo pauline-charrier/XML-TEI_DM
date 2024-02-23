@@ -21,7 +21,16 @@
          </titleStmt>
          
          <publicationStmt> 
-            <p>Projet d'encodage de cinq poèmes de Gérard de Nerval, réalisé dans le cadre de l'évaluation finale du cours XML-TEI du Master 2 "Technologies numériques appliquées à l'histoire" et produit à la date du <date when="2024-02-23">23 février 2024.</date> L'encodage a été réalisé à partir de deux références bibliographiques sources : le recueil des <title rend="italics">Chimères</title> dont sont tirés les quatre premiers poèmes encodés ainsi que le recueil des <title rend="italics">Odelettes</title> dont est tiré le cinquième poème isolé. Réalisé en commémoration des 170 ans de la parution des <title rend="italics">Filles du Feu</title>, il a pour objectif de mettre en exergue la dimension musicale des poèmes, au-delà de leur aspect énigmatique propre à l'ésotérisme nervalien, que l'encodage ne prétend pas dépasser (cet hermétisme étant revendiqué par Nerval lui-même). Cet encodage devrait permettre une analyse en "close-reading" de décomposition de chaque poème dans sa structure rythmique et prosodique. Une identification de la réccurrence des rimes et des jeux de sonorités peut également être mis en exergue. Une mise en corpus large des poèmes allié à un encodage similaire ou quelque peu plus modeste pourrait permettre une analyse globale des techniques utilisées par Nerval dans ses poèmes.</p>            
+            <p>Projet d'encodage de cinq poèmes de Gérard de Nerval, réalisé dans le cadre de l'évaluation finale du cours XML-TEI 
+               du Master 2 "Technologies numériques appliquées à l'histoire" et produit à la date du <date when="2024-02-23">23 février 2024.</date> 
+               L'encodage a été réalisé à partir de deux références bibliographiques sources : le recueil des <title rend="italics">Chimères</title> 
+               dont sont tirés les quatre premiers poèmes encodés ainsi que le recueil des <title rend="italics">Odelettes</title> dont est tiré le cinquième poème isolé. 
+               Réalisé en commémoration des 170 ans de la parution des <title rend="italics">Filles du Feu</title>, il a pour objectif de mettre en exergue la dimension musicale des poèmes, 
+               au-delà de leur aspect énigmatique propre à l'ésotérisme nervalien, que l'encodage ne prétend pas dépasser (cet hermétisme étant revendiqué par Nerval lui-même). 
+               Cet encodage devrait permettre une analyse en "close-reading" de décomposition de chaque poème dans sa structure rythmique et prosodique. 
+               Une identification de la réccurrence des rimes et des jeux de sonorités peut également être mis en exergue. 
+               Une mise en corpus large des poèmes allié à un encodage similaire ou quelque peu plus modeste pourrait permettre une analyse globale des techniques 
+               utilisées par Nerval dans ses poèmes.</p>            
          </publicationStmt>
          
          <sourceDesc>
@@ -69,7 +78,8 @@
                </biblStruct>
             </listBibl>
             <listBibl>
-               <head>Liste des ouvrages complémentaires consultés dans l'élaboration du travail d'encodage, d'annotation, ainsi que de constitution des index de lieux et de personnages : </head>
+               <head>Liste des ouvrages complémentaires consultés dans l'élaboration du travail d'encodage, d'annotation, 
+                  ainsi que de constitution des index de lieux et de personnages : </head>
                <biblStruct xml:id="LM" type="anthologie">
                   <monogr>                     
                      <idno type="ISBN">2-04-016216-X</idno>
@@ -154,17 +164,25 @@
       
       <encodingDesc>
          <projectDesc>
-            <p>Cet encodage réalisé dans le cadre du cours XML-TEI de Master 2 "Technologies numériques appliquées à l'histoire" a pour objectif de présenter et permettre à terme l'exploitation scientifique comme la valorisation esthétique des poèmes emblématiques de Nerval tirés des <title rend="italics">Chimères</title> et des <title rend="italics">Odelettes</title>. 
-               Les poèmes sélectionnés ici, parmi les plus célèbres du répertoire nervalien présentent un ésotérisme cryptique caractéristique, que l'encodage ne cherche a priori pas à dépasser, considérant qu'il s'agit là de la nature-même de la forme choisie par le poète. En revanche, l'encodage se veut un auxiliaire pour une approche en "close-reading" mettant en avant, entre autres, la dimension sonore et musicale du texte.
+            <p>Cet encodage réalisé dans le cadre du cours XML-TEI de Master 2 "Technologies numériques appliquées à l'histoire" a pour objectif de présenter 
+               et permettre à terme l'exploitation scientifique comme la valorisation esthétique des poèmes emblématiques de Nerval tirés 
+               des <title rend="italics">Chimères</title> et des <title rend="italics">Odelettes</title>. 
+               Les poèmes sélectionnés ici, parmi les plus célèbres du répertoire nervalien présentent un ésotérisme cryptique caractéristique, 
+               que l'encodage ne cherche a priori pas à dépasser, considérant qu'il s'agit là de la nature-même de la forme choisie par le poète. 
+               En revanche, l'encodage se veut un auxiliaire pour une approche en "close-reading" mettant en avant, entre autres, la dimension sonore et musicale du texte.
                Ainsi, les variations métriques, alternance de rimes et jeux de sonorités ont été identifiés et encodés.
-               Un index des personnes et des lieux a été ajouté afin d'identifier et de situer les références explicitement nommées par le poète. La pertinence de cet index est notamment à apprécier dans une perspective pédagogique, afin de permettre au lectorat non initié de se familiariser avec le champ référentiel de la poésie de Nerval. Il ne doit en aucun cas restreindre l'interprétation.
+               Un index des personnes et des lieux a été ajouté afin d'identifier et de situer les références explicitement nommées par le poète. 
+               La pertinence de cet index est notamment à apprécier dans une perspective pédagogique, afin de permettre au lectorat non initié de se familiariser 
+               avec le champ référentiel de la poésie de Nerval. Il ne doit en aucun cas restreindre l'interprétation.
             </p>
          </projectDesc>
          <editorialDecl>
             <p>La présentation typographique originale du texte (incluant les jeux de majuscule et d'italique) ainsi que les choix orthographiques ont été respectés.</p>
          </editorialDecl>
          <metDecl type="met">
-            <p>Le schéma métrique choisi correspond aux coupes internes du vers correspondant au décompte de chaque pied, ceci afin de mettre en évidence les variations rythmiques au sein de chaque strophe, essentielles à l'étude de la musicalité prosodique propre au poème. Le schéma métrique est découpé à la césure (symbolisée par convention par deux barres obliques) en deux hémistiches. Un "f" final éventuel marque la présence d'une rime féminine le cas échéant.</p>
+            <p>Le schéma métrique choisi correspond aux coupes internes du vers correspondant au décompte de chaque pied, ceci afin de mettre en évidence les variations 
+               rythmiques au sein de chaque strophe, essentielles à l'étude de la musicalité prosodique propre au poème. Le schéma métrique est découpé à la césure (symbolisée 
+               par convention par deux barres obliques) en deux hémistiches. Un "f" final éventuel marque la présence d'une rime féminine le cas échéant.</p>
          </metDecl>
       </encodingDesc>
       
@@ -186,7 +204,8 @@
                         <country key="ITA"/>
                      </address>
                   </placeName>
-                  <note>Promontoire au Nord-Ouest de la Baie de Naples, ancien lieu de villégiature de l'élite romaine, apprécié pour son panorama. La tradition y place la tombe de Virgile<bibl corresp="#LM"/>.</note>
+                  <note>Promontoire au Nord-Ouest de la Baie de Naples, ancien lieu de villégiature de l'élite romaine, apprécié pour son panorama. 
+                     La tradition y place la tombe de Virgile<bibl corresp="#LM"/>.</note>
                </place>
                <place xml:id="Acheron" type="mythical" subtype="river" cert="high">
                   <placeName>
@@ -211,7 +230,8 @@
                <!-- Index des personnages cités à caractère historique (c'est-à-dire dont l'existence est attestée) -->
                <person xml:id="Biron" role="historical" sex="male" cert="medium">
                   <persName>Charles de Gontaut-Biron</persName>
-                  <note>Maréchal de France au temps des guerres de religion, initialement proche d'Henri IV contre lequel il se retourne finalement. Condamné à mort pour haute trahison en 1602<bibl corresp="#HM"/>.</note>
+                  <note>Maréchal de France au temps des guerres de religion, initialement proche d'Henri IV contre lequel il se retourne finalement. 
+                        Condamné à mort pour haute trahison en 1602<bibl corresp="#HM"/>.</note>
                </person>
                <person xml:id="Constantin" role="historical" sex="male" cert="high">
                   <persName>Constantin</persName>
@@ -220,11 +240,13 @@
                <personGrp xml:id="duc_Normand" role="historical" sex="male" cert="medium" size="2">
                   <persName>Robert Guiscard</persName>
                   <persName>Roger de Hauteville</persName>
-                  <note>Chevaliers du XIème siècle issus du duché de Normandie qui jouèrent un rôle important dans la conquête de la Sicile et du sud de l'Italie contre les Byzantins et les musulmans<bibl corresp="#LM"/>.</note>
+                  <note>Chevaliers du XIème siècle issus du duché de Normandie qui jouèrent un rôle important dans la conquête de la Sicile 
+                        et du sud de l'Italie contre les Byzantins et les musulmans<bibl corresp="#LM"/>.</note>
                </personGrp>
                <person xml:id="Jenny_Colon" role="historical" sex="female"> 
                   <persName>Jenny Colon</persName>
-                  <note>Née Marguerite Colon (1808-1842), comédienne et chanteuse lyrique, elle est la muse de Gérard de Nerval qui en tombe amoureux à partir de leur rencontre en 1834.</note>                  
+                  <note>Née Marguerite Colon (1808-1842), comédienne et chanteuse lyrique, elle est la muse de Gérard de Nerval 
+                        qui en tombe amoureux à partir de leur rencontre en 1834.</note>                  
                </person>
                <person xml:id="Louis_XIII" role="historical" sex="male" cert="high">
                   <persName>Louis XIII</persName>
@@ -241,23 +263,28 @@
                </person>
                <person xml:id="Prince" role="historical" sex="male" cert="low">
                   <persName>Prince d'Aquitaine</persName>
-                  <note>On pense essentiellement au Edouard de Woodstock, connu sous le surnom de Prince Noir (1330-1376), notamment célèbre pour ses chevauchées meurtrières pendant la guerre de Cent Ans.</note>
+                  <note>On pense essentiellement au Edouard de Woodstock, connu sous le surnom de Prince Noir (1330-1376), 
+                        notamment célèbre pour ses chevauchées meurtrières pendant la guerre de Cent Ans.</note>
                </person>               
                <person xml:id="Rossini" role="historical" sex="male" cert="high">
                   <persName>Rossini</persName>
-                  <note>Gioachino Rossini, compositeur italien (1792-1868), contemporain de Nerval, spécialiste de l'opéra. Il est à noter que Nerval lui-même a composé ou inspiré des livrets d'opéras, tel que <title rend="italics">La Reine de Saba</title> de Gounod (1868).</note>
+                  <note>Gioachino Rossini, compositeur italien (1792-1868), contemporain de Nerval, spécialiste de l'opéra. 
+                        Il est à noter que Nerval lui-même a composé ou inspiré des livrets d'opéras, tel que <title rend="italics">La Reine de Saba</title> de Gounod (1868).</note>
                </person>                              
                <person xml:id="Ste_Gudule" role="historical" sex="female" cert="medium">
                   <persName>Sainte Gudule</persName>
-                  <note>Sainte belge ayant vécu au VIIème siècle et fêtée le 8 janvier. A Bruxelles se trouve également une cathédrale gothique au nom de Ste Gudule.</note>
+                  <note>Sainte belge ayant vécu au VIIème siècle et fêtée le 8 janvier. 
+                        A Bruxelles se trouve également une cathédrale gothique au nom de Ste Gudule.</note>
                </person>               
                <person xml:id="Virgile" role="historical" sex="male" cert="high">
                   <persName>Virgile</persName>
-                  <note>Illustre poète latin du Ier siècle avant notre ère, auteur de l'Enéide. Selon la légende, un laurier se trouvait au niveau de sa tombe à Naples.</note>
+                  <note>Illustre poète latin du Ier siècle avant notre ère, auteur de l'Enéide. 
+                        Selon la légende, un laurier se trouvait au niveau de sa tombe à Naples.</note>
                </person>   
                <person xml:id="Weber" role="historical" sex="male" cert="high">
                   <persName>Weber</persName>
-                  <note>Carl Maria Friedrich Ernst von Weber (1786-1826), compositeur romantique allemand, apparenté lui-même à la famille de Mozart (par l'épouse de ce dernier, Constance Weber).</note>
+                  <note>Carl Maria Friedrich Ernst von Weber (1786-1826), compositeur romantique allemand, 
+                        apparenté lui-même à la famille de Mozart (par l'épouse de ce dernier, Constance Weber).</note>
                </person>
                <!-- Index des personnages cités à caractère mythologique ou légendaire -->
                <person xml:id="Amour" role="mythical" sex="male" cert="high">
@@ -266,7 +293,9 @@
                </person>
                <person xml:id="Dafne" role="mythical" sex="female"> 
                   <persName>Daphné</persName>
-                  <note>Deux possibilités : il s'agit soit de la nymphe poursuivie par les ardeurs d'Apollon et transformée en laurier pour lui échapper (le nom grec "Daphné" signifiant "laurier"<bibl corresp="#HM"/>), soit la prêtresse de Delphes, fille du devin Tirésias, l'oracle aveugle de la cité de Thèbes consulté par Ulysse.</note>
+                  <note>Deux possibilités : il s'agit soit de la nymphe poursuivie par les ardeurs d'Apollon et transformée en laurier 
+                        pour lui échapper (le nom grec "Daphné" signifiant "laurier"<bibl corresp="#HM"/>), soit la prêtresse de Delphes, 
+                        fille du devin Tirésias, l'oracle aveugle de la cité de Thèbes consulté par Ulysse.</note>
                </person>
                <person xml:id="Iacchus" role="mythical" sex="male" cert="high">
                   <persName>Iacchus</persName>
@@ -274,7 +303,8 @@
                </person>
                <person xml:id="Melusine" role="mythical" sex="female" cert="low"> 
                   <persName>La Fée Mélusine</persName>
-                  <note>Personnage merveilleux mi-femme, mi-serpent de la littérature médiévale (voir le roman de Jean d'Arras en 1393). Fée bâtisseuse, elle est selon la légende fondatrice de la lignée des <persName ref="#Lusignan">Lusignan</persName><bibl corresp="#LM"/><bibl corresp="#HM"/>.</note>
+                  <note>Personnage merveilleux mi-femme, mi-serpent de la littérature médiévale (voir le roman de Jean d'Arras en 1393). 
+                        Fée bâtisseuse, elle est selon la légende fondatrice de la lignée des <persName ref="#Lusignan">Lusignan</persName><bibl corresp="#LM"/><bibl corresp="#HM"/>.</note>
                </person>
                <person xml:id="Muse" role="mythical" sex="female" cert="high">
                   <persName>La Muse</persName>
@@ -282,7 +312,9 @@
                </person>
                <person xml:id="Orphee" role="mythical" sex="male" cert="high">
                   <persName>Orphée</persName>
-                  <note>Héros de la mythologie grecque, incarnation de la figure du poète et du musicien, célèbre pour sa descente aux Enfers dans la quête d'Eurydice. A lier également à la doctrine orphique, qui se développe à l'époque classique et héllénistique et à laquelle Nerval s'est intéressé dans les années 1840, au même titre que le pythagorisme.</note>
+                  <note>Héros de la mythologie grecque, incarnation de la figure du poète et du musicien, 
+                        célèbre pour sa descente aux Enfers dans la quête d'Eurydice. A lier également à la doctrine orphique, 
+                           qui se développe à l'époque classique et héllénistique et à laquelle Nerval s'est intéressé dans les années 1840, au même titre que le pythagorisme.</note>
                </person>
                <person xml:id="Phebus" role="mythical" sex="male" cert="high">
                   <persName>Phébus</persName>
@@ -318,7 +350,8 @@
                   <surname>de Nerval</surname>
                </author>
                <respStmt>
-                  <resp>Quatre poèmes tirés du recueil <title rend="italics">Les Chimères</title> encodés dans le cadre du devoir final de XML-TEI du Master 2 "Technologies numériques appliquées à l'histoire", par </resp>                 
+                  <resp>Quatre poèmes tirés du recueil <title rend="italics">Les Chimères</title> 
+                        encodés dans le cadre du devoir final de XML-TEI du Master 2 "Technologies numériques appliquées à l'histoire", par </resp>                 
                   <persName>
                      <forename>Pauline</forename>
                      <surname>Charrier</surname>
@@ -327,7 +360,8 @@
             </titleStmt>
             
             <publicationStmt>
-               <p>Les quatre poèmes choisis ici ont été sélectionnés pour leur dimension musicale jugée particulièrement remarquable et donc susceptible de démontrer plus aisément les avantages d'une édition numérique pour la valorisation du caractère mélodique de la poésie nervalienne.</p>
+               <p>Les quatre poèmes choisis ici ont été sélectionnés pour leur dimension musicale jugée particulièrement remarquable et donc susceptible 
+                     de démontrer plus aisément les avantages d'une édition numérique pour la valorisation du caractère mélodique de la poésie nervalienne.</p>
             </publicationStmt>
 
             <sourceDesc>
@@ -368,7 +402,8 @@
                      <biblScope unit="page">pp. 291-294</biblScope>
                   </seriesStmt>
                   <sourceDesc>
-                     <p>Cette édition du recueil des <title rend="italics">Chimères</title> est un document original. L'encodage s'est concentré sur quatre des huit poèmes et douze sonnets (l'avant-dernier poème comprenant à lui seul cinq sonnets) du recueil.</p>
+                     <p>Cette édition du recueil des <title rend="italics">Chimères</title> est un document original. 
+                           L'encodage s'est concentré sur quatre des huit poèmes et douze sonnets (l'avant-dernier poème comprenant à lui seul cinq sonnets) du recueil.</p>
                   </sourceDesc>
                </biblFull>
             </sourceDesc>
@@ -377,7 +412,8 @@
          
          <profileDesc>
             <creation>
-               <date notBefore="1841" notAfter="1853" cert="high">Les poèmes des <title rend="italics">Chimères</title> ont probablement été composés entre février 1841 et septembre 1853.</date>
+               <date notBefore="1841" notAfter="1853" cert="high">Les poèmes des <title rend="italics">Chimères</title> 
+                     ont probablement été composés entre février 1841 et septembre 1853.</date>
             </creation>
          </profileDesc>
 
@@ -398,32 +434,48 @@
                      </head>
 
                      <lg type="quatrain" subtype="alexandrins" xml:id="P1_Q1" rhyme="ABAB">
-                        <l n="1" met="2/4//2/4" rhyme="A">Je suis le ténébreux, <caesura/> &tiret; le veuf, &tiret; l’inconso<rhyme xml:id="P1_A" label="le">lé</rhyme>,</l>
-                        <l n="2" met="3/3//3/3f" rhyme="B">Le <persName ref="#Prince">prince d’Aquitaine</persName> <caesura/> à la tour abo<rhyme xml:id="P1_B" label="li">lie</rhyme>:</l>
-                        <l n="3" met="2/4//3/3" rhyme="A">Ma seule <persName ref="#Jenny_Colon" cert="low" rend="italics">étoile</persName> est morte, <caesura/> &tiret; et mon luth constel<rhyme sameAs="#P1_A">lé</rhyme></l>
-                        <l n="4" met="2/4//2/4f" rhyme="B">Porte le <emph rend="italics">Soleil noir</emph> <caesura/> de la <emph rend="italics">Mélanco<rhyme sameAs="#P1_B">lie</rhyme></emph>.</l>
+                        <l n="1" met="2/4//2/4" rhyme="A">Je suis le ténébreux, <caesura/>
+                              &tiret; le veuf, &tiret; l’inconso<rhyme xml:id="P1_A" label="le">lé</rhyme>,</l>
+                        <l n="2" met="3/3//3/3f" rhyme="B">Le <persName ref="#Prince">prince d’Aquitaine</persName> <caesura/>
+                              à la tour abo<rhyme xml:id="P1_B" label="li">lie</rhyme>:</l>
+                        <l n="3" met="2/4//3/3" rhyme="A">Ma seule <persName ref="#Jenny_Colon" cert="low" rend="italics">étoile</persName> est morte, <caesura/>
+                              &tiret; et mon luth constel<rhyme sameAs="#P1_A">lé</rhyme></l>
+                        <l n="4" met="2/4//2/4f" rhyme="B">Porte le <emph rend="italics">Soleil noir</emph> <caesura/>
+                              de la <emph rend="italics">Mélanco<rhyme sameAs="#P1_B">lie</rhyme></emph>.</l>
                      </lg>
 
                      <lg type="quatrain" subtype="alexandrins" xml:id="P1_Q2" rhyme="ABAB">
-                        <l n="5" met="3/3//3/3" rhyme="A">Dans la nuit du tombeau, <caesura/> toi qui m’as conso<rhyme sameAs="#P1_A">lé</rhyme>,</l>
-                        <l n="6" met="2/4//3/3f" rhyme="B">Rends-moi le <placeName ref="#Pausilippe">Pausilippe</placeName> <caesura/> et la mer d’Ita<rhyme sameAs="#P1_B">lie</rhyme>,</l>
-                        <l n="7" met="2/4//3/3" rhyme="A">La fleur qui plaisait tant <caesura/> à mon coeur déso<rhyme sameAs="#P1_A">lé</rhyme>,</l>
-                        <l n="8" met="3/3//4/2f" rhyme="B">Et la treille où le pampre <caesura/> à la rose s’al<rhyme sameAs="#P1_B">li</rhyme>e.</l>
+                        <l n="5" met="3/3//3/3" rhyme="A">Dans la nuit du tombeau, <caesura/> 
+                              toi qui m’as conso<rhyme sameAs="#P1_A">lé</rhyme>,</l>
+                        <l n="6" met="2/4//3/3f" rhyme="B">Rends-moi le <placeName ref="#Pausilippe">Pausilippe</placeName> <caesura/> 
+                              et la mer d’Ita<rhyme sameAs="#P1_B">lie</rhyme>,</l>
+                        <l n="7" met="2/4//3/3" rhyme="A">La fleur qui plaisait tant <caesura/> 
+                              à mon coeur déso<rhyme sameAs="#P1_A">lé</rhyme>,</l>
+                        <l n="8" met="3/3//4/2f" rhyme="B">Et la treille où le pampre <caesura/> 
+                              à la rose s’al<rhyme sameAs="#P1_B">li</rhyme>e.</l>
                      </lg>
 
                      <lg type="tercet" subtype="alexandrins" xml:id="P1_T1" rhyme="CDD">
-                        <l n="9" met="3/3//3/3" rhyme="C">Suis-je <persName ref="#Amour">Amour</persName> ou <persName ref="#Phebus">Phébus</persName> ? <caesura/>… <persName ref="#Lusignan">Lusignan</persName> ou <persName ref="#Biron">Bi<rhyme xml:id="P1_C" label="ʁɔ̃">ron</rhyme></persName> ?</l>
-                        <l n="10" met="2/4//3/3f" rhyme="D"> Mon front est rouge encor <caesura/> du baiser de la <rhyme xml:id="P1_D" label="ʁɛn">reine</rhyme> ;</l>
-                        <l n="11" met="3/3//3/3f" rhyme="D">J’ai rêvé dans la grotte <caesura/> où nage la sy<rhyme sameAs="#P1_D">rène</rhyme>…</l>
+                        <l n="9" met="3/3//3/3" rhyme="C">Suis-je <persName ref="#Amour">Amour</persName> ou <persName ref="#Phebus">Phébus</persName> ? <caesura/>… 
+                              <persName ref="#Lusignan">Lusignan</persName> ou <persName ref="#Biron">Bi<rhyme xml:id="P1_C" label="ʁɔ̃">ron</rhyme></persName> ?</l>
+                        <l n="10" met="2/4//3/3f" rhyme="D"> Mon front est rouge encor <caesura/> 
+                              du baiser de la <rhyme xml:id="P1_D" label="ʁɛn">reine</rhyme> ;</l>
+                        <l n="11" met="3/3//3/3f" rhyme="D">J’ai rêvé dans la grotte <caesura/> 
+                              où nage la sy<rhyme sameAs="#P1_D">rène</rhyme>…</l>
                      </lg>
 
                      <lg type="tercet" subtype="alexandrins" xml:id="P1_T2" rhyme="CEE">
-                        <l n="12" met="2/4//3/3" rhyme="C">Et j’ai deux fois vainqueur <caesura/> traversé l’<placeName ref="#Acheron">Aché<rhyme sameAs="#P1_C">ron</rhyme></placeName> :</l>
-                        <l n="13" met="3/3//3/3f" rhyme="E">Modulant tour à tour <caesura/> sur la lyre d’<persName ref="#Orphee">Or<rhyme xml:id="P1_E" label="fe">phée</rhyme></persName></l>
-                        <l n="14" met="3/3//3/3f" rhyme="E">Les soupirs de la sainte <caesura/> et les cris de la <persName ref="#Melusine"><rhyme sameAs="#P1_E">fée</rhyme></persName>.</l>
+                        <l n="12" met="2/4//3/3" rhyme="C">Et j’ai deux fois vainqueur <caesura/> 
+                              traversé l’<placeName ref="#Acheron">Aché<rhyme sameAs="#P1_C">ron</rhyme></placeName> :</l>
+                        <l n="13" met="3/3//3/3f" rhyme="E">Modulant tour à tour <caesura/> 
+                              sur la lyre d’<persName ref="#Orphee">Or<rhyme xml:id="P1_E" label="fe">phée</rhyme></persName></l>
+                        <l n="14" met="3/3//3/3f" rhyme="E">Les soupirs de la sainte <caesura/> 
+                              et les cris de la <persName ref="#Melusine"><rhyme sameAs="#P1_E">fée</rhyme></persName>.</l>
                      </lg>
                      
-                     <note target="#Note_1">Ce terme signifie "le déshérité" en espagnol. Il est emprunté au roman <title rend="italics">Ivanhoé</title> (1819) de Walter Scott, où il est le surnom du héros, un chevalier médiéval renié par son père pour son allégeance au roi Plantagênet Richard Coeur de Lion, dans le cadre d'un tournoi.</note>
+                     <note target="#Note_1">Ce terme signifie "le déshérité" en espagnol. 
+                           Il est emprunté au roman <title rend="italics">Ivanhoé</title> (1819) de Walter Scott, où il est le surnom du héros, 
+                           un chevalier médiéval renié par son père pour son allégeance au roi Plantagênet Richard Coeur de Lion, dans le cadre d'un tournoi.</note>
                   </lg>
 
                </div2>
@@ -434,29 +486,43 @@
                      <head rend="small-caps">Myrtho</head>
 
                      <lg type="quatrain" subtype="alexandrins" xml:id="P2_Q1" rhyme="ABBA">
-                        <l n="1" met="4/2//2/4f" rhyme="A">Je pense à toi, <persName ref="#Myrtho">Myrtho</persName>, <caesura/> divine enchante<rhyme xml:id="P2_A" label="ʁɛs">resse</rhyme>,</l>
-                        <l n="2" met="4/2//4/2" rhyme="B">Au <placeName ref="#Pausilippe">Pausilippe</placeName> altier, <caesura/> de mille feux br<rhyme xml:id="P2_B" label="ijɑ̃">illant</rhyme>,</l>
-                        <l n="3" met="3/3//3/3" rhyme="B">À ton front inondé <caesura/> des clartés d’<metamark function="diaeresis"><abbr>Orïent</abbr><expan>Or<rhyme sameAs="#P2_B">ient</rhyme></expan></metamark>,</l>
-                        <l n="4" met="4/2//3/3f" rhyme="A">Aux raisins noirs mêlés <caesura/> avec l’or de ta t<rhyme sameAs="#P2_A">resse</rhyme>.</l>
+                        <l n="1" met="4/2//2/4f" rhyme="A">Je pense à toi, <persName ref="#Myrtho">Myrtho</persName>, <caesura/> 
+                              divine enchante<rhyme xml:id="P2_A" label="ʁɛs">resse</rhyme>,</l>
+                        <l n="2" met="4/2//4/2" rhyme="B">Au <placeName ref="#Pausilippe">Pausilippe</placeName> altier, <caesura/> 
+                              de mille feux br<rhyme xml:id="P2_B" label="ijɑ̃">illant</rhyme>,</l>
+                        <l n="3" met="3/3//3/3" rhyme="B">À ton front inondé <caesura/> 
+                              des clartés d’<metamark function="diaeresis"><abbr>Orïent</abbr><expan>Or<rhyme sameAs="#P2_B">ient</rhyme></expan></metamark>,</l>
+                        <l n="4" met="4/2//3/3f" rhyme="A">Aux raisins noirs mêlés <caesura/> 
+                              avec l’or de ta t<rhyme sameAs="#P2_A">resse</rhyme>.</l>
                      </lg>
 
                      <lg type="quatrain" subtype="alexandrins" xml:id="P2_Q2" rhyme="ABBA">
-                        <l n="5" met="4/2//4/2f" rhyme="A">C’est dans ta coupe aussi <caesura/> que j’avais bu l’iv<rhyme sameAs="#P2_A">resse</rhyme>,</l>
-                        <l n="6" met="4/2//3/3" rhyme="B">Et dans l’éclair furtif <caesura/> de ton œil <metamark function="diaeresis"><abbr>sourïant</abbr><expan>sour<rhyme sameAs="#P2_B">iant</rhyme></expan></metamark>,</l>
-                        <l n="7" met="3/3//4/2" rhyme="B">Quand aux pieds d’<persName ref="#Iacchus"><metamark function="diaeresis"><abbr>Ïacchus</abbr><expan>Iacchus</expan></metamark></persName> <caesura/> on me voyait pr<rhyme sameAs="#P2_B">iant</rhyme>,</l>
-                        <l n="8" met="3/3//3/3f" rhyme="A">Car la <persName ref="#Muse">Muse</persName> m’a fait <caesura/> l’un des fils de la G<rhyme sameAs="#P2_A">rèce</rhyme>.</l>
+                        <l n="5" met="4/2//4/2f" rhyme="A">C’est dans ta coupe aussi <caesura/> 
+                              que j’avais bu l’iv<rhyme sameAs="#P2_A">resse</rhyme>,</l>
+                        <l n="6" met="4/2//3/3" rhyme="B">Et dans l’éclair furtif <caesura/> 
+                              de ton œil <metamark function="diaeresis"><abbr>sourïant</abbr><expan>sour<rhyme sameAs="#P2_B">iant</rhyme></expan></metamark>,</l>
+                        <l n="7" met="3/3//4/2" rhyme="B">Quand aux pieds d’<persName ref="#Iacchus"><metamark function="diaeresis"><abbr>Ïacchus</abbr><expan>Iacchus</expan></metamark></persName> <caesura/> 
+                              on me voyait pr<rhyme sameAs="#P2_B">iant</rhyme>,</l>
+                        <l n="8" met="3/3//3/3f" rhyme="A">Car la <persName ref="#Muse">Muse</persName> m’a fait <caesura/> 
+                              l’un des fils de la G<rhyme sameAs="#P2_A">rèce</rhyme>.</l>
                      </lg>
 
                      <lg type="tercet" subtype="alexandrins" xml:id="P2_T1" rhyme="CDC">
-                        <l n="9" met="4/2//3/3" rhyme="C">Je sais pourquoi là-bas <caesura/> le <placeName ref="#Vesuve">volcan</placeName> s’est rou<rhyme xml:id="P2_C" label="vɛʁ">vert</rhyme>…</l>
-                        <l n="10" met="3/3//2/4f" rhyme="D">C’est qu’hier tu l’avais <caesura/> touché d’un pied a<rhyme xml:id="P2_D" label="ʒil">gile</rhyme>,</l>
-                        <l n="11" met="3/3//3/3" rhyme="C">Et de cendres soudain <caesura/> l’horizon s’est cou<rhyme sameAs="#P2_C">vert</rhyme>.</l>
+                        <l n="9" met="4/2//3/3" rhyme="C">Je sais pourquoi là-bas <caesura/> 
+                              le <placeName ref="#Vesuve">volcan</placeName> s’est rou<rhyme xml:id="P2_C" label="vɛʁ">vert</rhyme>…</l>
+                        <l n="10" met="3/3//2/4f" rhyme="D">C’est qu’hier tu l’avais <caesura/> 
+                              touché d’un pied a<rhyme xml:id="P2_D" label="ʒil">gile</rhyme>,</l>
+                        <l n="11" met="3/3//3/3" rhyme="C">Et de cendres soudain <caesura/> 
+                              l’horizon s’est cou<rhyme sameAs="#P2_C">vert</rhyme>.</l>
                      </lg>
 
                      <lg type="tercet" subtype="alexandrins" xml:id="P2_T2" rhyme="DDC">
-                        <l n="12" met="2/4//2/4f" rhyme="D">Depuis qu’un <persName ref="#duc_normand">duc normand</persName> brisa <caesura/> tes dieux d’ar<rhyme sameAs="#P2_D">gile</rhyme>,</l>
-                        <l n="13" met="2/4//3/3f" rhyme="D">Toujours, sous les rameaux <caesura/> du laurier de <persName ref="#Virgile">Vir<rhyme sameAs="#P2_D">gile</rhyme></persName>,</l>
-                        <l n="14" met="2/4//2/4" rhyme="C">Le pâle Hortensia <caesura/> s’unit au Myrthe <rhyme sameAs="#P2_C">vert</rhyme> !</l>
+                        <l n="12" met="2/4//2/4f" rhyme="D">Depuis qu’un <persName ref="#duc_normand">duc normand</persName> brisa <caesura/> 
+                              tes dieux d’ar<rhyme sameAs="#P2_D">gile</rhyme>,</l>
+                        <l n="13" met="2/4//3/3f" rhyme="D">Toujours, sous les rameaux <caesura/> 
+                              du laurier de <persName ref="#Virgile">Vir<rhyme sameAs="#P2_D">gile</rhyme></persName>,</l>
+                        <l n="14" met="2/4//2/4" rhyme="C">Le pâle Hortensia <caesura/> 
+                              s’unit au Myrthe <rhyme sameAs="#P2_C">vert</rhyme> !</l>
                      </lg>
                   </lg>
 
@@ -481,29 +547,43 @@
 
 
                      <lg type="quatrain" subtype="alexandrins" xml:id="P3_Q1" rhyme="ABBA">
-                        <l n="1" met="4/2//4/2f" rhyme="A">La connais-tu, <persName ref="#Dafne" rend="small-caps">Dafné</persName>, <caesura/> cette ancienne ro<rhyme xml:id="P3_A" label="mɑ̃s">mance</rhyme>,</l>
-                        <l n="2" met="2/4//2/4" rhyme="B">Au pied du sycomore, <caesura/> ou sous les lauriers <rhyme xml:id="P3_B" label="blɑ̃">blancs</rhyme>, </l>
-                        <l n="3" met="4/2//4/2" rhyme="B">Sous l’olivier, le myrthe <caesura/> ou les saules trem<rhyme sameAs="#P3_B">blants</rhyme>,</l>
-                        <l n="4" met="4/2//3/3f" rhyme="A">Cette chanson d’amour… <caesura/> qui toujours recom<rhyme sameAs="#P3_A">mence</rhyme> !</l>
+                        <l n="1" met="4/2//4/2f" rhyme="A">La connais-tu, <persName ref="#Dafne" rend="small-caps">Dafné</persName>, <caesura/> 
+                              cette ancienne ro<rhyme xml:id="P3_A" label="mɑ̃s">mance</rhyme>,</l>
+                        <l n="2" met="2/4//2/4" rhyme="B">Au pied du sycomore, <caesura/> 
+                              ou sous les lauriers <rhyme xml:id="P3_B" label="blɑ̃">blancs</rhyme>, </l>
+                        <l n="3" met="4/2//4/2" rhyme="B">Sous l’olivier, le myrthe <caesura/> 
+                              ou les saules trem<rhyme sameAs="#P3_B">blants</rhyme>,</l>
+                        <l n="4" met="4/2//3/3f" rhyme="A">Cette chanson d’amour… <caesura/> 
+                              qui toujours recom<rhyme sameAs="#P3_A">mence</rhyme> !</l>
                      </lg>
 
                      <lg type="quatrain" subtype="alexandrins" xml:id="P3_Q2" rhyme="ACCA">
-                        <l n="5" met="4/2//4/2f" rhyme="A">Reconnais-tu le <emph rend="small-caps">Temple</emph>, <caesura/> au péristyle im<rhyme sameAs="#P3_A">mense</rhyme>,</l>
-                        <l n="6" met="4/2//4/2" rhyme="C">Et les citrons amers <caesura/> où s’imprimaient tes <rhyme xml:id="P3_C" label="dɑ̃">dents</rhyme> ?</l>
-                        <l n="7" met="4/2//3/3" rhyme="C">Et la grotte, fatale <caesura/> aux hôtes impru<rhyme sameAs="#P3_C">dents</rhyme>,</l>
-                        <l n="8" met="4/2//4/2f" rhyme="A">Où du dragon vaincu <caesura/> dort l’antique se<rhyme sameAs="#P3_A">mence</rhyme>.</l>
+                        <l n="5" met="4/2//4/2f" rhyme="A">Reconnais-tu le <emph rend="small-caps">Temple</emph>, <caesura/> 
+                              au péristyle im<rhyme sameAs="#P3_A">mense</rhyme>,</l>
+                        <l n="6" met="4/2//4/2" rhyme="C">Et les citrons amers <caesura/> 
+                              où s’imprimaient tes <rhyme xml:id="P3_C" label="dɑ̃">dents</rhyme> ?</l>
+                        <l n="7" met="4/2//3/3" rhyme="C">Et la grotte, fatale <caesura/> 
+                              aux hôtes impru<rhyme sameAs="#P3_C">dents</rhyme>,</l>
+                        <l n="8" met="4/2//4/2f" rhyme="A">Où du dragon vaincu <caesura/> 
+                              dort l’antique se<rhyme sameAs="#P3_A">mence</rhyme>.</l>
                      </lg>
 
                      <lg type="tercet" subtype="alexandrins" xml:id="P3_T1" rhyme="DDE">
-                        <l n="9" met="4/2//4/2" rhyme="D">Ils reviendront, ces dieux <caesura/> que tu pleures tou<rhyme xml:id="P3_D" label="ʒuʁ">jours</rhyme> !</l>
-                        <l n="10" met="2/4//2/4" rhyme="D">Le temps va ramener <caesura/> l’ordre des anciens <rhyme sameAs="#P3_D">jours</rhyme> ;</l>
-                        <l n="11" met="2/4//3/3f" rhyme="E">La terre a tressailli <caesura/> d’un souffle prophé<rhyme xml:id="P3_E" label="tik">tique</rhyme>…</l>
+                        <l n="9" met="4/2//4/2" rhyme="D">Ils reviendront, ces dieux <caesura/> 
+                              que tu pleures tou<rhyme xml:id="P3_D" label="ʒuʁ">jours</rhyme> !</l>
+                        <l n="10" met="2/4//2/4" rhyme="D">Le temps va ramener <caesura/> 
+                              l’ordre des anciens <rhyme sameAs="#P3_D">jours</rhyme> ;</l>
+                        <l n="11" met="2/4//3/3f" rhyme="E">La terre a tressailli <caesura/> 
+                              d’un souffle prophé<rhyme xml:id="P3_E" label="tik">tique</rhyme>…</l>
                      </lg>
 
                      <lg type="tercet" subtype="alexandrins" xml:id="P3_T2" rhyme="FFE">
-                        <l n="12" met="3/3//4/2" rhyme="F">Cependant la <persName corresp="#Dafne" cert="medium">sibylle</persName> <caesura/> au visage la<rhyme xml:id="P3_F" label="tɛ̃">tin</rhyme></l>
-                        <l n="13" met="4/2//2/4" rhyme="F">Est endormie encor <caesura/> sous l’arc de <persName ref="#Constantin">Constan<rhyme sameAs="#P3_F">tin</rhyme></persName> :</l>
-                        <l n="14" met="2/4//3/3f" rhyme="E">&tiret; Et rien n’a dérangé <caesura/> le sévère por<rhyme sameAs="#P3_E">tique</rhyme>.</l>
+                        <l n="12" met="3/3//4/2" rhyme="F">Cependant la <persName corresp="#Dafne" cert="medium">sibylle</persName> <caesura/> 
+                              au visage la<rhyme xml:id="P3_F" label="tɛ̃">tin</rhyme></l>
+                        <l n="13" met="4/2//2/4" rhyme="F">Est endormie encor <caesura/> 
+                              sous l’arc de <persName ref="#Constantin">Constan<rhyme sameAs="#P3_F">tin</rhyme></persName> :</l>
+                        <l n="14" met="2/4//3/3f" rhyme="E">&tiret; Et rien n’a dérangé <caesura/> 
+                              le sévère por<rhyme sameAs="#P3_E">tique</rhyme>.</l>
                      </lg>
                   </lg>
 
@@ -516,29 +596,43 @@
                      <head rend="small-caps">Artémis</head>
 
                      <lg type="quatrain" subtype="alexandrins" xml:id="P4_Q1" rhyme="ABAB">
-                        <l n="1" met="4/2//3/3f" rhyme="A">La Treizième revient… <caesura/> C’est encor la premi<rhyme xml:id="P4_A1" label="ɛʁ">ère</rhyme> ;</l>
-                        <l n="2" met="2/4//2/4" rhyme="B">Et c’est toujours la seule, <caesura/> &tiret; ou c’est le seul mo<rhyme xml:id="P4_B" label="mɑ̃">ment</rhyme> :</l>
-                        <l n="3" met="4/2//3/3f" rhyme="A">Car es-tu reine, ô toi ! <caesura/> la première ou dern<rhyme xml:id="P4_A2" label="jɛʁ">ière</rhyme> ?</l>
-                        <l n="4" met="3/3//4/2" rhyme="B">Es-tu roi, toi le seul <caesura/> ou le dernier a<rhyme sameAs="#P4_B">mant</rhyme> ?…</l>
+                        <l n="1" met="4/2//3/3f" rhyme="A">La Treizième revient… <caesura/> 
+                              C’est encor la premi<rhyme xml:id="P4_A1" label="ɛʁ">ère</rhyme> ;</l>
+                        <l n="2" met="2/4//2/4" rhyme="B">Et c’est toujours la seule, <caesura/> 
+                              &tiret; ou c’est le seul mo<rhyme xml:id="P4_B" label="mɑ̃">ment</rhyme> :</l>
+                        <l n="3" met="4/2//3/3f" rhyme="A">Car es-tu reine, ô toi ! <caesura/> 
+                              la première ou dern<rhyme xml:id="P4_A2" label="jɛʁ">ière</rhyme> ?</l>
+                        <l n="4" met="3/3//4/2" rhyme="B">Es-tu roi, toi le seul <caesura/> 
+                              ou le dernier a<rhyme sameAs="#P4_B">mant</rhyme> ?…</l>
                      </lg>
 
                      <lg type="quatrain" subtype="alexandrins" xml:id="P4_Q2" rhyme="ABBA">
-                        <l n="5" met="2/4//3/3f" rhyme="A">Aimez qui vous aima <caesura/> du berceau dans la b<rhyme sameAs="#P4_A2">ière</rhyme> ;</l>
-                        <l n="6" met="2/4//3/3" rhyme="B">Celle que j’aimai seul <caesura/> m’aime encor tendre<rhyme sameAs="#P4_B">ment</rhyme> :</l>
-                        <l n="7" met="3/3//3/3" rhyme="B">C’est la mort &tiret; ou <persName corresp="#Jenny_Colon" cert="low">la morte</persName>… <caesura/> Ô délice ! ô tour<rhyme sameAs="#P4_B">ment</rhyme> !</l>
-                        <l n="8" met="3/3//4/2f" rhyme="A">La rose qu’elle tient, <caesura/> c’est la <emph rend="italics">Rose trém<rhyme sameAs="#P4_A2">ière</rhyme></emph>.</l>
+                        <l n="5" met="2/4//3/3f" rhyme="A">Aimez qui vous aima <caesura/> 
+                              du berceau dans la b<rhyme sameAs="#P4_A2">ière</rhyme> ;</l>
+                        <l n="6" met="2/4//3/3" rhyme="B">Celle que j’aimai seul <caesura/> 
+                              m’aime encor tendre<rhyme sameAs="#P4_B">ment</rhyme> :</l>
+                        <l n="7" met="3/3//3/3" rhyme="B">C’est la mort &tiret; ou <persName corresp="#Jenny_Colon" cert="low">la morte</persName>… <caesura/> 
+                              Ô délice ! ô tour<rhyme sameAs="#P4_B">ment</rhyme> !</l>
+                        <l n="8" met="3/3//4/2f" rhyme="A">La rose qu’elle tient, <caesura/> 
+                              c’est la <emph rend="italics">Rose trém<rhyme sameAs="#P4_A2">ière</rhyme></emph>.</l>
                      </lg>
 
                      <lg type="tercet" subtype="alexandrins" xml:id="P4_T1" rhyme="CDC">
-                        <l n="9" met="2/4//2/4" rhyme="C">Sainte napolitaine <caesura/> aux mains pleines de f<rhyme xml:id="P4_C1" label="ø">eux</rhyme>,</l>
-                        <l n="10" met="3/3//2/4f" rhyme="D">Rose au cœur <metamark function="diaeresis"><abbr>vïolet</abbr><expan>violet</expan></metamark>, <caesura/> fleur de <persName ref="#Ste_Gudule">sainte Gud<rhyme xml:id="P4_D" label="yl">ule</rhyme></persName> :</l>
-                        <l n="11" met="2/4//4/2" rhyme="C">As-tu trouvé ta croix <caesura/> dans le désert des c<rhyme xml:id="P4_C2" label="jø">ieux</rhyme> ?</l>
+                        <l n="9" met="2/4//2/4" rhyme="C">Sainte napolitaine <caesura/> 
+                              aux mains pleines de f<rhyme xml:id="P4_C1" label="ø">eux</rhyme>,</l>
+                        <l n="10" met="3/3//2/4f" rhyme="D">Rose au cœur <metamark function="diaeresis"><abbr>vïolet</abbr><expan>violet</expan></metamark>, <caesura/> 
+                              fleur de <persName ref="#Ste_Gudule">sainte Gud<rhyme xml:id="P4_D" label="yl">ule</rhyme></persName> :</l>
+                        <l n="11" met="2/4//4/2" rhyme="C">As-tu trouvé ta croix <caesura/> 
+                              dans le désert des c<rhyme xml:id="P4_C2" label="jø">ieux</rhyme> ?</l>
                      </lg>
 
                      <lg type="tercet" subtype="alexandrins" xml:id="P4_T2" rhyme="CDC">
-                        <l n="12" met="4/2//4/2" rhyme="C">Roses blanches, tombez ! <caesura/> vous insultez nos d<rhyme sameAs="#P4_C2">ieux</rhyme>,</l>
-                        <l n="13" met="2/4//4/2f" rhyme="D">Tombez, fantômes blancs, <caesura/> de votre ciel qui br<rhyme sameAs="#P4_D">ûle</rhyme> :</l>
-                        <l n="14" met="3/3//3/3" rhyme="C">&tiret; La sainte de l’abîme <caesura/> est plus sainte à mes <rhyme sameAs="#P4_C2">yeux</rhyme> !</l>
+                        <l n="12" met="4/2//4/2" rhyme="C">Roses blanches, tombez ! <caesura/>  
+                              vous insultez nos d<rhyme sameAs="#P4_C2">ieux</rhyme>,</l>
+                        <l n="13" met="2/4//4/2f" rhyme="D">Tombez, fantômes blancs, <caesura/> 
+                              de votre ciel qui br<rhyme sameAs="#P4_D">ûle</rhyme> :</l>
+                        <l n="14" met="3/3//3/3" rhyme="C">&tiret; La sainte de l’abîme <caesura/> 
+                              est plus sainte à mes <rhyme sameAs="#P4_C2">yeux</rhyme> !</l>
                      </lg>
                   </lg>
 
@@ -578,7 +672,8 @@
                   <surname>de Nerval</surname>
                </author>
                <respStmt>
-                  <resp>Poème "Fantaisie" tiré du recueil <title rend="italics">Odelettes</title>, encodé dans le cadre du devoir final de XML-TEI du Master 2 "Technologies numériques appliquées à l'histoire", par </resp>                 
+                  <resp>Poème "Fantaisie" tiré du recueil <title rend="italics">Odelettes</title>, encodé dans le cadre du devoir final de XML-TEI 
+                        du Master 2 "Technologies numériques appliquées à l'histoire", par </resp>                 
                   <persName>
                      <forename>Pauline</forename>
                      <surname>Charrier</surname>
@@ -587,7 +682,9 @@
             </titleStmt>
             
             <publicationStmt>
-               <p>Seul un poème tiré des <title rend="italics">Odelettes</title> a été sélectionné pour l'encodage : il s'agit d'un poème particulièrement remarquable pour sa rythmique et sa forme (appartenant à une forme non fixe en décasyllabes) bien distincte du sonnet que nous avons choisi d'encoder en première partie de corpus.</p>
+               <p>Seul un poème tiré des <title rend="italics">Odelettes</title> a été sélectionné pour l'encodage : 
+                   il s'agit d'un poème particulièrement remarquable pour sa rythmique et sa forme (appartenant à une forme non fixe en décasyllabes) 
+                   bien distincte du sonnet que nous avons choisi d'encoder en première partie de corpus.</p>
             </publicationStmt>
             
             <sourceDesc>
@@ -659,31 +756,47 @@
                      <head rend="small-caps">Fantaisie</head>                   
                      
                      <lg type="quatrain" subtype="decasyllabes" xml:id="P5_Q1" rhyme="ABBA">
-                        <l n="1" met="2/2//2/4" rhyme="A">Il est un air <caesura/> pour qui je donne<rhyme xml:id="P5_A" label="ʁɛ">rais</rhyme></l>                     
-                        <l n="2" met="1/3//3/3f" rhyme="B">Tout <persName ref="#Rossini">Rossini</persName>, <caesura/> tout <persName ref="#Mozart">Mozart</persName> et tout <persName ref="#Weber"><metamark function="poetic_licence"><abbr>Wèbre</abbr><expan>W<rhyme xml:id="P5_B" label="ɛbʁ">eber</rhyme></expan></metamark></persName> ;</l>
-                        <l n="3" met="2/2//3/3f" rhyme="B">Un air très-vieux,<caesura/> languissant et fun<rhyme sameAs="#P5_B">èbre</rhyme>,</l>
-                        <l n="4" met="1/3//4/2" rhyme="A">Qui pour moi seul <caesura/> a des charmes sec<rhyme sameAs="#P5_A">rets</rhyme>.</l>
+                        <l n="1" met="2/2//2/4" rhyme="A">Il est un air <caesura/> 
+                             pour qui je donne<rhyme xml:id="P5_A" label="ʁɛ">rais</rhyme></l>                     
+                        <l n="2" met="1/3//3/3f" rhyme="B">Tout <persName ref="#Rossini">Rossini</persName>, <caesura/> 
+                             tout <persName ref="#Mozart">Mozart</persName> et tout <persName ref="#Weber"><metamark function="poetic_licence"><abbr>Wèbre</abbr><expan>W<rhyme xml:id="P5_B" label="ɛbʁ">eber</rhyme></expan></metamark></persName> ;</l>
+                        <l n="3" met="2/2//3/3f" rhyme="B">Un air très-vieux,<caesura/> 
+                              languissant et fun<rhyme sameAs="#P5_B">èbre</rhyme>,</l>
+                        <l n="4" met="1/3//4/2" rhyme="A">Qui pour moi seul <caesura/> 
+                              a des charmes sec<rhyme sameAs="#P5_A">rets</rhyme>.</l>
                      </lg>
                      
                      <lg type="quatrain" subtype="decasyllabes" xml:id="P5_Q2" rhyme="CDCD">
-                        <l n="5" met="1/3//3/3f" rhyme="C">Or, chaque fois <caesura/> que je viens à l’ent<rhyme xml:id="P5_C" label="ɑ̃dʁ">endre</rhyme>,</l>
-                        <l n="6" met="3/1//3/3" rhyme="D">De deux cents ans <caesura/> mon âme rajeu<rhyme xml:id="P5_D" label="ni">nit</rhyme> :</l>
-                        <l n="7" met="1/3//3/3f" rhyme="C">C’est sous <persName ref="#Louis_XIII">Louis treize</persName>… <caesura/> et je crois voir s’ét<rhyme sameAs="#P5_C">endre</rhyme></l>
-                        <l n="8" met="4//4/2" rhyme="D">Un coteau vert <caesura/> que le couchant jau<rhyme sameAs="#P5_D">nit</rhyme>,</l>
+                        <l n="5" met="1/3//3/3f" rhyme="C">Or, chaque fois <caesura/> 
+                              que je viens à l’ent<rhyme xml:id="P5_C" label="ɑ̃dʁ">endre</rhyme>,</l>
+                        <l n="6" met="3/1//3/3" rhyme="D">De deux cents ans <caesura/> 
+                              mon âme rajeu<rhyme xml:id="P5_D" label="ni">nit</rhyme> :</l>
+                        <l n="7" met="1/3//3/3f" rhyme="C">C’est sous <persName ref="#Louis_XIII">Louis treize</persName>… <caesura/> 
+                              et je crois voir s’ét<rhyme sameAs="#P5_C">endre</rhyme></l>
+                        <l n="8" met="4//4/2" rhyme="D">Un coteau vert <caesura/> 
+                              que le couchant jau<rhyme sameAs="#P5_D">nit</rhyme>,</l>
                      </lg>
                      
                      <lg type="quatrain" subtype="decasyllabes" xml:id="P5_Q3" rhyme="EFEF">
-                        <l n="9" met="1/3//2/4f" rhyme="E">Puis un château <caesura/> de brique à coins de p<rhyme xml:id="P5_E" label="jɛʁ">ierre</rhyme>,</l>
-                        <l n="10" met="3/1//4/2" rhyme="F">Aux vitraux teints <caesura/> de rougeâtres cou<rhyme xml:id="P5_F" label="lœʁ">leurs</rhyme>,</l>                     
-                        <l n="11" met="1/3//4/2f" rhyme="E">Ceint de grands parcs, <caesura/> avec une riv<rhyme sameAs="#P5_E">ière</rhyme></l>
-                        <l n="12" met="4//2/4" rhyme="F">Baignant ses pieds, <caesura/> qui coule entre des f<rhyme sameAs="#P5_F">leurs</rhyme>.</l>
+                        <l n="9" met="1/3//2/4f" rhyme="E">Puis un château <caesura/> 
+                              de brique à coins de p<rhyme xml:id="P5_E" label="jɛʁ">ierre</rhyme>,</l>
+                        <l n="10" met="3/1//4/2" rhyme="F">Aux vitraux teints <caesura/> 
+                              de rougeâtres cou<rhyme xml:id="P5_F" label="lœʁ">leurs</rhyme>,</l>                     
+                        <l n="11" met="1/3//4/2f" rhyme="E">Ceint de grands parcs, <caesura/> 
+                              avec une riv<rhyme sameAs="#P5_E">ière</rhyme></l>
+                        <l n="12" met="4//2/4" rhyme="F">Baignant ses pieds, <caesura/> 
+                              qui coule entre des f<rhyme sameAs="#P5_F">leurs</rhyme>.</l>
                      </lg>
                      
                      <lg type="quatrain" subtype="decasyllabes" xml:id="P5_Q4" rhyme="GHGH">
-                        <l n="13" met="1/3//4/2f" rhyme="G">Puis une dame, <caesura/> à sa haute fen<rhyme xml:id="P5_G" label="ɛtʁ">être</rhyme>,</l>
-                        <l n="14" met="1/3//4/2" rhyme="H">Blonde aux yeux noirs, <caesura/> en ses habits anc<rhyme xml:id="P5_H" label="jɛ̃">iens</rhyme>…</l>
-                        <l n="15" met="1/3//4/2f" rhyme="G">Que, dans une autre <caesura/> existence peut-<rhyme sameAs="#P5_G">être</rhyme>,</l>
-                        <l n="16" met="4//2/4" rhyme="H">J’ai déjà vue ! <caesura/> &tiret; et dont je me souv<rhyme sameAs="#P5_H">iens</rhyme> !</l>
+                        <l n="13" met="1/3//4/2f" rhyme="G">Puis une dame, <caesura/> 
+                              à sa haute fen<rhyme xml:id="P5_G" label="ɛtʁ">être</rhyme>,</l>
+                        <l n="14" met="1/3//4/2" rhyme="H">Blonde aux yeux noirs, <caesura/> 
+                              en ses habits anc<rhyme xml:id="P5_H" label="jɛ̃">iens</rhyme>…</l>
+                        <l n="15" met="1/3//4/2f" rhyme="G">Que, dans une autre <caesura/> 
+                              existence peut-<rhyme sameAs="#P5_G">être</rhyme>,</l>
+                        <l n="16" met="4//2/4" rhyme="H">J’ai déjà vue ! <caesura/> 
+                              &tiret; et dont je me souv<rhyme sameAs="#P5_H">iens</rhyme> !</l>
                      </lg>                   
                      
                   </lg>
