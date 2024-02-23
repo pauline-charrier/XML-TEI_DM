@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
-	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="out/ODD_Nerval.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 
 <!DOCTYPE TEI [
     <!ENTITY tiret "&#8212;">
 ]>
 
 
-<?xml-model href="out/ODD_Nerval.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
 <teiCorpus version="3.3.0" xmlns="http://www.tei-c.org/ns/1.0">
    
    <teiHeader>
