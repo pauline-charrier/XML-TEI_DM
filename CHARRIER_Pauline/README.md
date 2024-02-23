@@ -10,6 +10,7 @@ Le présent repository se compose comme suit :
 - un dossier `out`comprenant un fichier RNG généré à partir du fichier ODD
 
 
-*Note* : Pour permettre l'ouverture et la bonne lecture du fichier XML-TEI, il est nécessaire d'activer la prise en charge des caractères spéciaux (symboles de l'alphabet phonétique international).
+*Note* : Pour permettre l'ouverture et la bonne lecture du fichier XML-TEI, il est nécessaire d'activer la prise en charge des caractères spéciaux (symboles de l'alphabet phonétique international). 
+Il faut aussi noter que certains symboles ne semblent pas s'afficher correctement sur l'interface de GitHub (notamment en ce qui concerne l'affichage de la tilde de nasalisation).
 
 
