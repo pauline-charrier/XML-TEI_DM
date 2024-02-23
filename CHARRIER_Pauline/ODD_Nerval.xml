@@ -1,0 +1,1870 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+   xmlns:s="http://purl.oclc.org/dsdl/schematron"
+   xml:lang="en">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Présentation de la méthodologie suivie pour l'encodage des cinq poèmes de Nerval tirés des <title rend="italics">Chimères</title> (1856) et des <title rend="italics">Odelettes</title> (1853).</title>
+            <author>Pauline Charrier</author>
+         </titleStmt>
+         <publicationStmt>
+            <p>Edition encodée produite dans le cadre de l'évaluation finale du cours XML-TEI du Master "Technologies numériques appliquées à l'histoire" de l'Ecole nationale des chartes.</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Schéma XML généré automatiquement par oddbyexample puis repris manuellement par l'auteure de cette présentation.</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div1>
+            <head>Documentation scientifique</head>
+            <div2>
+               <head>Introduction : positionnement éditorial</head>
+               <div3>
+                  <head>Enjeux et objectifs de l'encodage</head>
+                  <div4>
+                     <head>Approche</head>
+                     <p>L'approche suivie par notre encodage est une approche dite en "close-reading", accordant une attention qui se veut méticuleuse au texte, en tirant profit de la faible taille de corpus imposée dans le cadre du devoir (jusqu'à cinq textes de longueur modeste). A ce titre, l'encodage réalisé, prenant pour objet cinq poèmes est relativement lourd et se concentre essentiellement sur l'étude de la versification et des symboles invoqués par le poète (d'où le recours au module VERSE pour le choix des éléments et attributs privilégiés, ainsi qu'à la constitution de deux index, patronymique et toponymique.</p>
+                  </div4>
+                  <div4>
+                     <head>Objectif initial et difficultés rencontrées</head>
+                     <p>L'objectif initialement poursuivi était la mise en avant de l'aspect sonore du texte, qui constitue selon nous la grande richesse de la production nervalienne, au-delà de son hermétisme sémantique revendiqué. Il s'agit tant : <list><item>- d'exposer au lectorat plus ou moins initié la musicalité de l'oeuvre (ses motifs de versification, ses jeux de sonorités) mais aussi sa grande part symbolique</item><item>- que de produire un encodage permettant une future exploitation notamment statistique des données récoltées, notamment sur le plan de l'analyse métrique.</item></list> A ce titre, le choix d'encodage initial incluait, en plus d'un important effort de balisage relatif à l'analyse métrique, un grand nombre nombre de balises complémentaires allouées à l'étude d'autres éléments de l'oeuvre très riche, de Nerval, à savoir, les couleurs, les expressions florales, etc. Cela avait notamment été l'objet d'un système de balisage usant d'un système de balises <gi>seg</gi> portant l'attribut <att>function</att>.</p>
+                     <p>Le choix initial ayant été jugé trop ambitieux (analyse des couleurs et de l'ensemble des jeux prosodiques, incluant allitérations et assonances), car rendant l'encodage trop lourd et entravant la lisibilité comme les potentialités d'exploitations ultérieures (par la superposition d'un grand nombre de balises sur les mêmes caractères), nous avons revu nos objectifs en allégeant la balisage.</p>
+                  </div4>
+                  <div4>
+                     <head>Objectifs finaux</head>
+                     <p>Partant d'une analyse valorisant la prosodie au sens large, nous nous sommes concentrés sur l'analyse métrique et l'étude de la versification au prisme des jeux de correspondances entre les vers, mettant en avant le goût manifeste de Nerval pour les rimes riches, et le rôle de ces dernières dans l'appréciation musicale que l'on peut porter aux poèmes des deux recueils étudiés. La part réservée à l'étude des symboles a été néamoins préservée grâce à la mise en place de deux index. L'objectif de l'encodage se veut de proposer à la fois une familiarisation avec l'oeuvre de Nerval pour en démystifier certains contours (sans pour autant complètement dépasser la dimension énigmatique des poèmes voulue et défendue par l'auteur) et la mise en évidence de prosodés prosodiques qui pourront faire l'objet d'une étude quantitative dans un second temps (répartition statistique par exemple).</p>
+                  </div4>
+               </div3>
+               <div3>
+                  <head>Perspectives d'exploitation scientifique et de valorisation esthétique</head>
+                  <p>Comme mentionné ci-dessus, la perspective principale de valorisation envisagée à partir de cet encodage est l'étude des correspondances musicales vers à vers, notamment envisageable à la suite d'un déploiement en grand corpus (incluant l'ensemble des poèmes d'un recueil ou de plusieurs recueil d'une même période ou de forme similaire par exemple).</p>
+               </div3>              
+               <div3>
+                  <head>But de la présente documentation</head>
+                  <p>La présente documentation indique les choix d'encodage suivis au sein de notre projet, en prenant en compte autant que possible les besoins potentiels des équipes souhaitant réutiliser ce schéma. Il s'agit donc d'envisager une utilisation postérieure de ce schéma pour des études similaires sur d'autres oeuvres poétiques.</p>                  
+               </div3>
+            </div2>
+            <div2>
+               <head>Description des choix d'encodage</head>
+               <div3>
+                  <head>Remarques générales</head>
+                  <div4>
+                     <head>Structure du fichier</head>
+                     <p>Nous avons choisi la structure en corpus, permise par l'usage de l'élément <gi>teiCorpus</gi>, comprenant un en-tête de corpus (<gi>teiHeader</gi>) ainsi que plusieurs documents TEI (élément <gi>TEI</gi>) comprenant eux-mêmes un élément <gi>teiHeader</gi> et un élément <gi>text</gi>. Ce choix est motivé par l'objet-même de notre encodage : nous nous sommes intéressés à cinq poèmes, dont quatre proviennent du même recueil, le cinquième se retrouvant ainsi en position isolée. Deux groupes textuels aux métadonnées distinctes (le groupe du recueil A et le groupe du recueil B) se dégageant ainsi, nous avons privilégié un angle d'approche de corpus, en dépit du déséquilibre numérique entre les deux groupes.</p>
+                     <p>L'en-tête de corpus se compose de trois sous-ensembles principaux, que nous expliciterons de manière suivante :
+                        <specList>
+                           <specDesc key="fileDesc"/>
+                           <specDesc key="encodingDesc"/>
+                           <specDesc key="profileDesc"/>
+                        </specList>
+                        <list>
+                           <item>Un élément <gi>fileDesc</gi>, que nous avons complété en partant du principe que le niveau corpus présente un document numérique à part entière et relève donc d'une entité de niveau supérieur (une édition électronique à part entière). Ainsi, le <gi>titleStmt</gi> a été rempli en cohérence avec ce principe, considérant que l'auteur de l'encodage est auteur de l'édition numérique ainsi obtenue. Dans un souci de précision et possiblement d'indexation dans une exploitation future, les éléments enfants de la balise <gi>author</gi> ont été divisés en <gi>forename</gi> et <gi>surname</gi>, à la place du jugé trop vague <gi>persName</gi>. Le <gi>publicationStmt</gi> se veut une présentation brève en prose du projet d'encodage et de ses objectifs principaux. Enfin, le <gi>sourceDesc</gi> comporte une bibliographie structurée (<gi>biblStruct</gi>) incluant dans des ensembles distincts mais faisant tous partie du <gi>sourceDesc</gi> les sources que l'on peut qualifier de "primaires" (les poèmes faisant l'objet de l'encodage) et les sources "secondaires" (ouvrages d'anthologie ou critiques ayant pour objet d'étude les textes en question). Ce choix, peut-être moins orthodoxe, se justifie en cohérence avec la logique d'ensemble de l'en-tête de corpus : si ce dernier porte sur l'ensemble de l'encodage et considère qu'elle constitue une édition à part entière, alors les sources utilisées pour la constituer (texte et notes/index compris) doivent être considérées comme des sources à part entière et trouvent ainsi leur place dans le <gi>sourceDesc</gi>.</item>
+                           <item>Un élément <gi>encodingDesc</gi>, traitant du projet éditorial dans ses aspects techniques. Il se divise en trois sous-ensembles distincts : l'élément <gi>projectDesc</gi>, présentant l'orientation choisie et l'élément <gi>editorialDecl</gi>, détaillant les possibles modifications typographiques effectuées, spécifient tous les deux le rapport de l'encodage au texte source et les choix d'édition. Dans le cas de notre encodage, nous avons privilégié sur le plan typographique une approche imitative et conservatrice. Ainsi, nous avons eu recours à la balise <gi>emph</gi> et à son attribut de rendu <att>rend</att> afin de rendre en italique ou en petites majuscules les termes se trouvant typographiés ainsi dans les éditions sources de 1853 et 1856. Enfin, le <gi>encodingDesc</gi> comporte une déclaration sur le schéma métrique ou <gi>metDecl</gi>, dont la mention est obligatoire lorsqu'un schéma métrique a été invoqué dans le corps du texte, et dont l'information demeure indispensable en vue d'une future exploitation et réutilisation du schéma. Nous avons précisé à cet élément l'attribut <att>met</att> qui correspond à l'attribut prenant pour valeur l'expression du schéma métrique dans notre encodage et sur lequel nous reviendrons plus avant.</item>
+                           <item>Un élément <gi>profileDesc</gi>, qui se focalise essentiellement (dans notre encodage) sur le contexte de création du corpus (grâce à l'élément <gi>creation</gi>, qui spécifie dans notre cas le lieu, la date et la langue de production) mais également sur les index de lieux (<gi>settingDesc</gi>/<gi>listPlace</gi>) et de personnes (<gi>particDesc</gi>/<gi>listPerson</gi>, selon une logique similaire). Nous reviendrons également sur la question des index plus en détails plus bas.</item>
+                        </list>
+                     </p>
+                     <p>Les en-têtes des deux documents TEI individuels, correspondant aux poèmes, se structurent quant à eux de manière suivante :
+                        <specList>
+                           <specDesc key="fileDesc"/>
+                           <specDesc key="profileDesc"/>
+                        </specList>
+                        <list>
+                           <item>Un élément <gi>fileDesc</gi>, complété en considérant que nous traitons des éditions sources, ce qui nous amène à identifier Nerval comme <gi>author</gi> dans le <gi>titleStmt</gi>, selon un protocole formel identique à celui suivi précédemment (<gi>forename</gi> et <gi>surname</gi>). Une URL pérenne Wikidata a été placée en valeur de l'attribut <att>ref</att> de <gi>author</gi> afin de favoriser l'effort d'interopérabilité. La responsabilité de l'encodeur n'apparaît que dans le <gi>respStmt</gi> du <gi>titleStmt</gi>, là aussi en suivant le protocole formel précédemment établi. Le <gi>publicationStmt</gi> demeure bref mais caractérise spécifiquement les choix d'encodage relatifs à l'oeuvre encodée dans le <gi>text</gi> correspondant. Il s'agit également de rappeler la justification du choix des poèmes encodés dans le <gi>text</gi> suivant. Enfin, le <gi>sourceDesc</gi> se distingue formellement de son homologue de niveau corpus en ce que le choix de forme de bibliographie est différent. Nous avons opté pour une bibliographie totalement structurée (<gi>biblFull</gi>), incluant tous les éléments propres au document TEI. Ce choix, en cohérence avec celui invoqué plus haut, se justifie par le fait que l'on envisage ici notre encodage comme édition des textes sources, il s'agit donc de détailler les références de manière la plus précise possibles, en les incorporant pleinement à la structure générale du document TEI (et non pas en les considérant comme des sources "complémentaires" extérieures) et sans les multiplier. L'adresse de la maison d'édition se voit par exemple davantage détaillée que dans le <gi>biblStruct</gi> de niveau corpus. Ce choix permet également d'entrer dans le détail en ce qui concerne le numéro d'édition et les droits de diffusion attachés à l'oeuvre textuelle qui fait l'objet de l'édition (grâce à la balise <gi>availability</gi> au sein du <gi>publicationStmt</gi> notamment). Enfin, un élément <gi>seriesStmt</gi>, dont nous avons quelque peu détourné l'usage, est également inclus. Dans notre encodage, cet élément est utilisé pour spécifier les relations de hiérarchie et d'emboîtement entre les différents niveaux bibliographiques (l'entrée (<val>entry</val>), au niveau du poème, la partie (<val>part</val>), au niveau du recueil et le livre (<val>book</val>), au niveau de l'ouvrage monographique). Pour conclure, un élément <gi>sourceDesc</gi> est également présent (en conformité avec le schéma TEI-All sur lequel s'appuie le présent schéma) se justifie par l'impossibilité d'insérer du texte de façon brute ou au sein d'un <gi>p</gi> lorsque suivi (ou précédé) par l'élément <gi>biblFull</gi> (en d'autres termes, il ne semblait pas possible d'insérer au sein d'un même <gi>sourceDesc</gi> et au même niveau d'héritage un élément <gi>biblFull</gi> et un élément <gi>p</gi>). </item>
+                           <item>Un élément <gi>profileDesc</gi>, plutôt bref mais comportant un élément <gi>creation</gi> qui permet de contextualiser la production du texte source, auquel nous avons choisi d'insérer une balise <gi>date</gi> accompagnés d'indications telles que <att>notBefore</att> et <att>notAfter</att> complété par une indication du degré de certitude attaché à cette information (<att>cert</att>).</item>
+                        </list>
+                     </p>
+                     <p>L'élément <gi>encodingDesc</gi> a été omis des en-têtes individuels car, considérant que les informations données au niveau du corpus s'appliquant à l'ensemble des documents TEI cités ensuite, nous n'avons pas jugé utile de rappeler les mêmes informations à la fois au niveau du corpus et au niveau des documents individuels.</p>
+                     <p>Le corps de chaque document TEI se compose ensuite de manière suivante : 
+                        <list>
+                           <item>Un élément <gi>div1</gi>, enfant unique du <gi>body</gi>, il s'agit de la division textuelle correspondant au niveau du recueil. Son attribut <att>type</att> le spécifie ainsi.</item>
+                           <item>Un élément <gi>div2</gi>, enfant de <gi>div1</gi>, qui correspond à la division textuelle correspondant au niveau du poème, comme cela est spécifié par son attribut <att>type</att>. Cette balise porte également un attribut de numérotation (<att>n</att>) indiquant l'ordre d'enchaînement des poèmes au sein du recueil (indépendamment du nombre de poèmes encodés !), ainsi qu'un attribut d'identification <att>xml:id</att>, trouvant son intérêt dans le cas d'une exploitation future, notamment à des fins de comparaison de poème à poème. Il s'agit ici d'identifier chaque poème par un identifiant unique (<val>P1</val>, <val>P2</val>...).</item>
+                           <item>Un élément <gi>lg</gi>, enfant de <gi>div2</gi> : il s'agit de la balise globale du poème, plus spécifique qu'une <gi>div</gi> pour identifier un poème (et conforme au schéma TEI-All qui préconise l'usage du module VERSE). Son attribut <att>type</att> spécifie quant à lui la forme poétique concernée (sonnet, ode, rondeau, etc.).</item>
+                           <item>Un deuxième élément <gi>lg</gi>, enfant du précédent <gi>lg</gi>. Ce deuxième <gi>lg</gi> concerne quant à lui le niveau de la strophe. Le type de strophe est spécifié par l'attribut <att>type</att>, le type de mètre est spécifié par l'attribut <att>subtype</att>, il porte un identifiant unique en valeur de l'attribut <att>xml:id</att> et est complété par une indication quant au motif de rime observé au niveau de la strophe (rimes embrassées, croisées, etc.) en valeur de l'attribut <att>rhyme</att>.</item>
+                           <item>Un élément <gi>l</gi>, correspondant au niveau du vers. Cet élément est lui aussi riche en attributs : il porte l'attribut <att>n</att> de numérotation des vers au sein du poème, afin de permettre l'identification de chaque ligne. Il est complété par les attributs propres à l'analyse métrique <att>met</att> et <att>rhyme</att>, correspondant respectivement au schéma métrique (coupes toniques au sein du vers) et au schéma de versification (identification de la rime, parmi celles notées en valeur du même attribut <att>rhyme</att> mais au niveau de la strophe (élément <gi>lg</gi>)).</item>
+                        </list>
+                     </p>
+                     <p>Sous le niveau du vers (<gi>l</gi>), nous trouvons, suivant une répartition inégale et variables selon les textes encodés :
+                        <list>
+                           <item>La balise <gi>caesura</gi>, sous forme auto-fermante. Il s'agit de la marque de césure, coupant le vers en deux hémistiches.</item>
+                           <item>Les balises <gi>persName</gi> et <gi>placeName</gi>, allouées à l'identification des noms de personnes et de lieux en référence (attribut <att>ref</att>) aux index précédemment établis au niveau corpus.</item>
+                           <item>La balise <gi>emph</gi>, servant à reproduire les variations typographiques du texte source (le rendu stylisé est explicité en valeur de l'attribut <att>rend</att>).</item>
+                           <item>La balise <gi>rhyme</gi>, permettant d'identifier la rime finale. Cet élément comporte deux attributs : un attribut d'identification sous la forme d'un <att>xml:id</att> permettant d'isoler la rime, ainsi qu'un attribut de description <att>label</att>, en valeur duquel nous avons choisi d'intégrer la représentation phonétique (selon les standards de l'Alphabet phonétique international) de la rime ainsi identifiée. Cela afin de permettre dans un second temps une exploitation des sons les plus prisés par Nerval, par exemple, ou leur association avec des symboles précis.</item>
+                           <item>La balise <gi>metamark</gi>, sur laquelle nous reviendrons en fin de documentation, qui nous a servi à indiquer des décalages entre la graphie et la prononciation souhaitée pour la bonne scansion (et le respect du nombre de pieds) du poème, que ce soit dans le cas d'une diérèse (<val>diaeresis</val>) ou d'une licence poétique (<val>poetic_licence</val>).</item>
+                        </list>
+                     </p>
+                     <p>Nous nous attarderons sur les usages de ces balises plus bas au sein de ce document.</p>
+                  </div4>
+                  <div4>
+                     <head>Cohérence linguistique</head>
+                     <p>Notre encodage montre un usage alterné du français et de l'anglais dans les valeurs d'attribut. Cette alternance peut sembler incohérente, mais nous la justifions ainsi : l'anglais a été préféré pour les attributs facilement généralisables à d'autres éditions. Ainsi, l'attribut <att>type</att> de l'élément <gi>place</gi> au sein de l'index de personnes du niveau corpus comporte des valeurs en anglais, bien que transparentes pour un lecteur francophone (<val>historical</val>, <val>mythical</val>, <val>fictional</val>). En revanche, en ce qui concerne les attributs dont les valeurs décrivent une réalité littéraire plus "strictement" française, des valeurs en français ont été choisies : il en est ainsi de la valeur <val>alexandrins</val> ou <val>decasyllabes</val> de l'attribut <att>subtype</att> et de la valeur <val>quatrain</val> de l'attribut <att>type</att> de l'élément <gi>lg</gi> (strophe). De même pour la valeur <val>sonnet</val> de l'attribut <att>type</att> de l'élément <gi>lg</gi> de niveau poème (enfant de <gi>div2</gi>). Ce choix demeure subjectif et ouvert à discussion.</p>
+                  </div4>
+                  <div4>
+                     <head>Création d'entités</head>
+                     <p>Nous avons inclus à notre encodage une DTD interne plutôt modeste (ce qui justifie son caractère interne), comprenant une déclaration d'entité pour le tiret cadratin. Ce choix a été fait car ce symbole typographique revient régulièrement dans les poèmes étudiés et il nous a semblé que sa transformation en entité pourrait limiter les erreurs de saisie d'encodage comme éviter les conflits d'encodages entre différents systèmes (tels Unicode et UTF-8).</p>                     
+                  </div4> 
+               </div3>
+               <div3>
+                  <head>Approche imitative et respect des hiérarchies du texte source</head>
+                  <p>Notre encodage se conçoit, en dépit de son caractère incomplet, comme une édition au niveau du recueil et non au niveau du poème. Ainsi, la première division textuelle choisie dans la structuration de l'encodage, une division de niveau 1, à savoir l'élément <gi>div1</gi> se place au niveau du recueil, comme le spécifie à ce titre son attribut <att>type</att>. Le titre du recueil est également mentionné dans une balise <gi>head</gi>. En cohérence avec ce positionnement, le nombre d'éléments <gi>div2</gi>, correspondant au niveau du poème, correspond au nombre de poèmes au sein du recueil, qu'ils aient été encodés intégralement ou non. La présence de ces poèmes (ou de leurs ombres) au sein de notre encodage est particulièrement perceptible grâce aux valeurs de l'attribut <att>n</att> des <gi>div2</gi>, qui diffèrent des valeurs numériques retrouvées partiellement dans les <att>xml:id</att> du niveau <gi>div2</gi> (<val>P1</val> pour "poème 1", etc. au niveau de l'encodage et non du recueil !). Ainsi, le poème numéro 6 au niveau du recueil peut être le poème d'identifiant <val>P4</val> au sein de notre encodage.
+                  Ainsi :</p>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     <div2 type="poème" n="6" xml:id="P4">
+                        <lg type="sonnet">
+                           <head rend="small-caps">Artémis</head>
+                        </lg>
+                     </div2>
+                  </egXML>
+               </div3>
+               <div3>
+                  <head>Encodage des métadonnées</head>
+                  <div4>
+                     <head>Au niveau du corpus (teiCorpus) et au niveau de chaque texte individuel</head>
+                     <p>Comme signalé plus haut, nous considérons que l'encodage en lui-même constitue une édition électronique à part entière, lorsque nous nous trouvons au niveau du corpus. Les métadonnées concernant l'auteur (au sein du <gi>titleStmt</gi>) sont ainsi des données qui concernent l'auteur de l'encodage, tandis que l'auteur des textes sources est indiqué en tant que <gi>author</gi> dans le <gi>sourceDesc</gi>. Nous vous renvoyons au paragraphe dévolu à la structure du fichier pour la justification des choix concernant le format de bibliographie, moins détaillé au niveau corpus (par un <gi>biblStruct</gi> au lieu d'un <gi>biblFull</gi> au niveau des documents individuels). Cette justification tient essentiellement du rapport entre "sources primaires" (recueils) et "sources secondaires" (anthologies, encyclopédies et ouvrages de littérature critique) dans l'élaboration de notre propre édition, du point de vue duquel a été constitué le <gi>fileDesc</gi> de l'en-tête du niveau corpus. Concernant les différences entre format de bibliographies, notons également que les facteurs ayant fait pencher la balance en faveur d'une double solution <gi>biblStruct</gi> au niveau corpus et <gi>biblFull</gi> au niveau document sont : la recherche de clarté, de synthèse, d'efficacité, mais aussi une volonté de limiter les redondances entre les en-têtes du corpus et de chaque document, ce qui aurait été plus délicat dans le cas où le <gi>biblFull</gi> avait été adopté partout, d'autant plus que la possibilité d'indiquer plus d'une source dans le <gi>biblFull</gi> paraissait mettre en péril l'intelligibilité de l'ensemble.</p>
+                  </div4>
+               </div3>
+               <div3>
+                  <head>Elaboration des index : objectifs et mise en oeuvre</head>
+                  <p>La mise en place de deux index, l'un des personnes et l'autre des lieux s'est révélée rapidement un outil utile pour permettre une familiarisation du lectorat avec le champ référentiel propre aux poèmes nervaliens ainsi qu'une possibilité de réaliser une analyse des symboles, tout en gardant ouvertes les interprétations potentielles. Il s'agit ici de proposer au lecteur un choix non exhaustif d'interprétations parmi celles les plus évoquées dans la littérature critique et de lui offrir des repères pour entrer en contact avec l'oeuvre tout en mettant en évidence la polysémie essentielle du texte.  Il est à noter que des références bibliographiques aux sources dites "secondaires" employées pour déterminer l'identification des individus et des lieux sont citées au sein-même du corpus grâce à la balise <gi>bibl</gi> et à son attribut <att>corresp</att> dont la valeur renvoie directement à la bibliographie structurée (<gi>biblStruct</gi>) du niveau corpus. Au sein du texte, les renvois vers l'index se font grâce au couple élément/attribut <gi>persName</gi> ou <gi>placeName</gi> et <att>ref</att>.</p>
+                  <div4>
+                     <head>Index des noms de personnages cités</head>
+                     <p>Les noms de personnages mentionnés dans le texte font l'objet de l'index. Ici, du fait de la nature des textes étudiés, nous ne limitons bien entendu pas aux seuls "participants identifiables d'une interaction linguistique", comme cela pourrait être le cas d'un encodage d'une nouvelle ou d'une pièce de théâtre par exemple. Nous nous limitons à la simple évocation de noms, voire de syntagmes nominaux évoquant des personnages réels (valeur <val>historical</val> de l'attribut <att>role</att>), légendaires (<val>mythical</val> de l'attribut <att>role</att>) ou inventés de toutes pièces par le poète lui-même (<val>fictional</val> de l'attribut <att>role</att>). Un attribut complémentaire de l'élément <gi>person</gi> (auquel se rattache l'attribut <att>role</att> précédemment cité, choisi comme équivalent de l'attribut <att>type</att> dans l'index des toponymes - <gi>person</gi> n'admettant pas <att>type</att>) est l'attribut <att>cert</att> qui marque le degré de confiance dans l'attribution ainsi faite entre le nom cité dans le texte et le personnage identifié par l'index. Cet attribut a été inclus pour certains éléments indexés pour lesquels l'interprétation est sujette à débat selon les commentateurs mais que l'on a souhaité inclure dans l'édition. Le sexe des individus cités est mentionné à titre d'information complémentaire, et peut faire l'objet d'une étude s'intéressant à la place du féminin dans l'oeuvre de Nerval par exemple (dont la poésie est marquée par l'absence de la femme, en écho avec la mort précoce de la mère du poète tout comme de sa muse, Jenny Colon).</p>
+                  </div4>
+                  <div4>
+                     <head>Index des toponymes cités</head>
+                     <p>L'index des noms de lieux reprend les codes de l'index des personnages, afin cependant un changement au niveau des attributs. Les attributs de <gi>place</gi> choisis sont : <att>type</att>, qui spécifie le degré de réalité de l'entité mentionnée (<val>real</val> ou <val>mythical</val>). Quant à l'attribut <att>subtype</att>, il explicite la nature géographique de l'entité à laquelle se réfère l'index. Là encore, un attribut <att>cert</att> présente le degré de certitude accordé à l'inteprétation. Le cas échéant, nous avons indiqué la localisation de l'endroit par pays ainsi que le nom dans la langue locale.</p>
+                  </div4>
+               </div3>
+               <div3>
+                  <head>L'encodage au service de l'analyse métrique</head>
+                  <div4>
+                     <head>Segmentation du vers</head>
+                     <p>L'encodage s'est concentré sur une division traditionnelle du vers en deux hémistiches par une césure représentée par la balise autofermante <gi>caesura</gi>. Il s'agit ici de marquer le rythme du vers et de souligner les différences émergeant des différentes formes de métriques (l'alexandrin voit sa césure tomnber après la sixième syllabe, c'est-à-dire en milieu parfait de vers, tandis que le décasyllabe voit sa césure traditionnellement tomber après la quatrième syllabe, ce qui lui octroie un rythme ascendant (4+6)). Aucun attribut n'est spécifié pour l'élément <gi>caesura</gi>.</p>
+                     <p>Dans cet exemple : la césure sur les vers alexandrins.</p>
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <lg type="quatrain" subtype="alexandrins" xml:id="P4_Q1" rhyme="ABAB">
+                           <l n="1" met="4/2//3/3f" rhyme="A">La Treizième revient… <caesura/> C’est encor la premi<rhyme xml:id="P4_A1" label="er">ère</rhyme> ;</l>
+                           <l n="2" met="2/4//2/4" rhyme="B">Et c’est toujours la seule, <caesura/> - ou c’est le seul mo<rhyme xml:id="P4_B" label="man">ment</rhyme> :</l>
+                           <l n="3" met="4/2//3/3f" rhyme="A">Car es-tu reine, ô toi ! <caesura/> la première ou dern<rhyme xml:id="P4_A2" label="ier">ière</rhyme> ?</l>
+                           <l n="4" met="3/3//4/2" rhyme="B">Es-tu roi, toi le seul <caesura/> ou le dernier a<rhyme sameAs="#P4_B">mant</rhyme> ?…</l>
+                        </lg>
+                     </egXML>
+                     <p>A comparer avec la césure sur les décasyllabes : </p>
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <lg type="quatrain" subtype="decasyllabes" xml:id="P5_Q1" rhyme="ABBA">
+                           <l n="1" met="2/2//2/4" rhyme="A">Il est un air <caesura/> pour qui je donne<rhyme xml:id="P5_A" label="re">rais</rhyme></l>                     
+                           <l n="2" met="1/3//3/3f" rhyme="B">Tout <persName ref="#Rossini">Rossini</persName>, <caesura/> tout <persName ref="#Mozart">Mozart</persName> et tout <persName ref="#Weber"><metamark function="poetic_licence"><abbr>Wèbre</abbr><expan>W<rhyme xml:id="P5_B" label="èbr">eber</rhyme></expan></metamark></persName> ;</l>
+                           <l n="3" met="2/2//3/3f" rhyme="B">Un air très-vieux,<caesura/> languissant et fun<rhyme sameAs="#P5_B">èbre</rhyme>,</l>
+                           <l n="4" met="1/3//4/2" rhyme="A">Qui pour moi seul <caesura/> a des charmes sec<rhyme sameAs="#P5_A">rets</rhyme>.</l>
+                        </lg>
+                     </egXML>
+                  </div4>
+                  <div4>
+                     <head>Visualisation des correspondances dans la versification</head>
+                     <p>Les correspondances rime à rime et vers à vers sont documentées grâce à :
+                     <list>
+                        <item>- l'élément <gi>rhyme</gi> et ses attributs <att>xml:id</att> et <att>label</att> pour l'encodage des rimes finales. Notons ici que nous prenons en compte en tant que "rime finale" la plus grande terminaison commune (ou PGTC), selon le terme de Benoît de Cornulier. Il s'agit de mettre en évidence la grande fréquence des rimes riches voire richissimes chez Nerval.</item>
+                        <item>- l'attribut <att>rhyme</att> au sein de l'élément <gi>l</gi> documentant la rime finale pour l'ensemble du vers, cela afin de potentiellement envisager une exploitation future sous la forme d'une recherche de rime par vers, et non par caractère ou mot, comme cela pourrait être le cas avec l'élément <gi>rhyme</gi> cité plus tôt. Il ne s'agit donc pas d'une redondance, mais d'une différence d'angle assumée par le projet.</item>
+                     </list>
+                     </p>
+                     <p>L'intérêt de cette visualisation tient dans la mise en évidence des jeux de correspondances entre rime et pourrait permettre, en envisageant une étude sur corpus plus large, une recherche d'ordre statistique sur les sonorités revenant le plus souvent en fin de vers chez Nerval (fréquence d'occurrence), par exemple, ou leur proximité avec d'autres termes ou syllabes voisines (fréquence de co-occurrences).</p>
+                  </div4>
+                  <div4>
+                     <head>Attention portée à la prosodie et à la dimension orale de l'oeuvre</head>
+                     <p>L'étude de la musicalité et des jeux de sonorité étant au centre de notre projet éditorial, il était nécessaire d'envisager une manière de signaler par les choix d'encodage, les possibles déviations de prononciation par rapport aux usages phonétiques habituels, fréquemment rencontrées en poésie (sous les formes de diérèses - inclusion de diphtongues non exprimées en langue parlée ; ou de licence poétique - modifications phonétiques exceptionnelles afin de permettre la régularité du nombre de pieds d'un vers et de le scander de façon "conventionnelle").</p>
+                     <p>Nous nous sommes donc intéressés à ce propos à la balise <gi>metamark</gi>, pour laquelle la définition large prévoit l'usage suivant : "toute forme de signe écrit dans le document dont la fonction est de guider la lecture orale" (traduction personnelle des informations tirées des guidelines, qui n'existent qu'en anglais pour cet élément à ma connaissance). Nous avons donc pris le parti d'adapter délibérément l'usage de cette balise, qui comprend un attribut <att>function</att> (définissant la raison d'être de la balise) ainsi que deux éléments enfants : <gi>abbr</gi> et <gi>expan</gi>. Nous avons choisi d'indiquer la version "modifiée" du texte au sein de la balise <gi>abbr</gi> et la version originale dans la balise <gi>expan</gi>. Le choix inverse aurait également pu être légitime, de notre point de vue : il s'agit là a priori d'une question d'angle de vue sur le sujet (que l'on considère une forme enrichie d'un tréma signalant une diphtongue comme une expansion plutôt qu'une abréviation semble tout à fait justifié). Ici, nous sommes partis du principe que la version étendue devait demeurer la version originale, notamment dans la perspective d'une exploitation future. Il s'agit également de la zone où se place la balise <gi>rhyme</gi> dans le cas où le texte encodé fait à la fois l'objet d'une diérèse/licence poétique et d'une rime finale.</p>
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <p>Voir l'exemple ci-dessous : </p>
+                        <lg type="quatrain" subtype="alexandrins" xml:id="P2_Q1" rhyme="ABBA">
+                           <l n="1" met="4/2//2/4f" rhyme="A">Je pense à toi, <persName ref="#Myrtho">Myrtho</persName>, <caesura/> divine enchante<rhyme xml:id="P2_A" label="res">resse</rhyme>,</l>
+                           <l n="2" met="4/2//4/2" rhyme="B">Au <placeName ref="#Pausilippe">Pausilippe</placeName> altier, <caesura/> de mille feux br<rhyme xml:id="P2_B" label="iyan">illant</rhyme>,</l>
+                           <l n="3" met="3/3//3/3" rhyme="B">À ton front inondé <caesura/> des clartés d’<metamark function="diaeresis"><abbr>Orïent</abbr><expan>Or<rhyme sameAs="#P2_B">ient</rhyme></expan></metamark>,</l>
+                           <l n="4" met="4/2//3/3f" rhyme="A">Aux raisins noirs mêlés <caesura/> avec l’or de ta t<rhyme sameAs="#P2_A">resse</rhyme>.</l>
+                        </lg>
+                     </egXML>
+                  </div4>
+                  <div4>
+                     <head>Analyse de la rythmique</head>
+                     <p>Enfin, le coeur de notre encodage porte sur l'analyse de la métrique-même. Nous avons choisi pour cela l'attribut <att>met</att> au sein de l'élément <gi>l</gi>. Ce choix présente un risque : celui de surcharger encore l'encodage de l'élément <gi>l</gi>, déjà très riche. Cependant, deux raisons en justifient l'usage : un tel positionnement permet à l'information de schéma métrique de s'appliquer sur l'ensemble du vers (1) et évite en cela de surcharger encore plus l'encodage général du texte avec une segmentation par <gi>seg</gi>, telle qu'envisagée initialement (2).</p>
+                     <p>Le système de schéma métrique utilisé en valeur de l'attribut <att>met</att> est explicité dans le <gi>metDecl</gi> (déclaration sur la métrique) dans le <gi>encodingDesc</gi> de niveau corpus. Dans notre encodage, ce schéma est un schéma de coupe tonique, modélisé sous forme de décompte de syllabes séparées par barre oblique (une barre oblique séparant deux pieds) et divisée en deux hémistiches avec une césure modélisée par deux barres obliques (//) par convention française.</p>
+                     <p>Voir la déclaration sur la métrique :</p>
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <metDecl type="met">
+                           <p>Le schéma métrique choisi correspond aux coupes internes du vers correspondant au décompte de chaque pied, ceci afin de mettre en évidence les variations rythmiques au sein de chaque strophe, essentielles à l'étude de la musicalité prosodique propre au poème. Le schéma métrique est découpé à la césure (symbolisée par convention par deux barres obliques) en deux hémistiches. Un "f" final éventuel marque la présence d'une rime féminine le cas échéant.</p>
+                        </metDecl>
+                     </egXML>
+                  </div4>
+               </div3>               
+            </div2>
+         </div1>
+         <div1>
+            <head>Documentation technique</head>
+            <schemaSpec ident="ODD_Nerval" start="TEI teiCorpus">
+               
+               
+               <!-- Eléments dont les règles de validation ont été modifiées manuellement -->
+               
+               <!-- REGLE CONTRAIGNANT L'USAGE D'UN ATTRIBUT OU DE SA OU SES VALEURS -->
+               
+               <!-- Règles de validation de l'élément <place/> -->
+               <elementSpec ident="place" mode="change">
+                  <gloss>Lieu</gloss> 
+                  <desc>Information sur un lieu géographique. Partie constitutive de l'index des lieux dans notre encodage.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <!-- Restriction des valeurs possibles de l'attribut @type dans <place/> à "mythical", "real" et "undefined" -->
+                     <!-- Justification : notre encodage définit une interprétation spécifique de l'usage de l'attribut @type dans ce contexte (évaluation du degré de réalité) et reconnaît trois formes de rapport d'une entité littéraire à la réalité historique -->
+                     <!-- L'attribut @type devient requis -->
+                     <attDef ident="type" mode="change" usage="req">
+                        <valList mode="add" type="closed">
+                           <valItem ident="mythical"/>
+                           <valItem ident="real"/>
+                           <valItem ident="undefined"/>
+                        </valList>
+                     </attDef>
+                     <!-- Restriction des valeurs possibles de l'attribut @subtype dans <place/> -->
+                     <!-- Son usage est recommandé -->
+                     <attDef ident="subtype" mode="change" usage="rec">
+                        <valList mode="add" type="closed">
+                           <valItem ident="region"/>
+                           <valItem ident="river"/>
+                           <valItem ident="volcano"/>
+                           <valItem ident="sea"/>
+                           <valItem ident="mountain"/>
+                           <valItem ident="country"/>
+                           <valItem ident="undefined"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>  
+               
+               <!-- Règles de validation de l'élément <person/> -->
+               <elementSpec ident="person" mode="change">
+                  <gloss>Personne</gloss> 
+                  <desc>Fournit des informations sur un individu identifiable, par exemple un participant à une interaction linguistique, ou une personne citée dans une source historique. Partie constitutive de l'index des personnes dans notre encodage.</desc> 
+                  <attList>
+                     <!-- Ajout de valeurs possibles à l'attribut @role qui vient requis -->
+                     <attDef ident="role" mode="change" usage="req">
+                        <valList mode="add" type="closed">
+                           <valItem ident="fictional"/>
+                           <valItem ident="historical"/>
+                           <valItem ident="mythical"/>
+                           <valItem ident="undefined"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="gender" mode="delete"/>
+                     <attDef ident="age" mode="delete"/>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               
+               <!-- REGLE CONTRAIGNANT L'ENCHAINEMENT DE CERTAINS ELEMENTS & REGLE CONTRAIGNANT LA VALEUR D'UN ATTRIBUT EN FONCTION DE SON ENVIRONNEMENT -->
+              
+               <!-- Règles de validation de l'élément <div1/> -->
+               <elementSpec ident="div1" mode="change">
+                  <gloss>Division de texte de niveau 1</gloss> 
+                  <desc>Contient une subdivision de premier niveau dans le texte préliminaire, dans le corps d’un texte ou dans le texte postliminaire.</desc>
+                  <!-- l'élément <div1> contient une séquence de <head> et une ou plusieurs séquences de <div2> -->
+                  <!-- Justification : l'élément <div1> dans notre encodage se place au niveau du recueil, il comporte donc nécessairement un titre (<head>) et une division <div2> qui correspond au niveau du poème -->
+                  <content>
+                     <sequence maxOccurs="1">
+                        <elementRef key="head"/>
+                        <elementRef key="div2" maxOccurs="unbounded"/>
+                     </sequence>
+                  </content>
+                  <!-- L'attribut @type de <div1> doit avoir comme valeur "recueil" -->
+                  <!-- Justification : logique de l'encodage -->
+                  <constraintSpec ident="typeVal" scheme="schematron">
+                     <constraint>
+                        <s:rule context="tei:div1[@type]">
+                           <s:assert test="matches(@type, 'recueil')"/>
+                        </s:rule>
+                     </constraint>
+                  </constraintSpec>
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="org" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="uniform"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="sample" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="complete"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="met" mode="delete"/>
+                     <attDef ident="rhyme" mode="delete"/>
+                     <attDef ident="part" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="N"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="type" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="recueil"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="subtype" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <div2/> -->
+               <elementSpec ident="div2" mode="change">
+                  <gloss>Division de texte de niveau 2</gloss> 
+                  <desc>Contient une subdivision de deuxième niveau dans le texte prélimaire, dans le corps d’un texte ou dans le texte postliminaire.</desc>
+                  <!-- L'élément <div2> contient au minimum/au maximum une séquence de <lg> -->
+                  <!-- Justification : l'élément <div2> dans notre encodage correspond au niveau du poème, et son enfant <lg> correspond au plus grand ensemble versifié possible. Ainsi, il ne peut y en avoir qu'un seul -->
+                  <content>
+                     <sequence maxOccurs="1" minOccurs="1">
+                        <elementRef key="lg"/>                        
+                     </sequence>
+                  </content>
+                  <!-- L'attribut @type de <div2> doit avoir comme valeur "poème" -->
+                  <!-- Justification : logique de l'encodage -->
+                  <constraintSpec ident="typeVal" scheme="schematron">
+                     <constraint>
+                        <s:rule context="tei:div2[@type]">
+                           <s:assert test="matches(@type, 'poème')"/>
+                        </s:rule>
+                     </constraint>
+                  </constraintSpec>
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="org" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="uniform"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="sample" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="complete"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="met" mode="delete"/>
+                     <attDef ident="rhyme" mode="delete"/>
+                     <attDef ident="part" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="N"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="type" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="poème"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="subtype" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- AUTRE REGLE -->
+               
+               <!-- Règles de validation de l'élément <lg/> -->
+               <elementSpec ident="lg" mode="change">
+                  <gloss>Groupe ou ensemble de vers</gloss> 
+                  <desc>Contient un groupe de vers fonctionnant comme une unité formelle, par exemple une strophe, un refrain, un paragraphe en vers, etc.</desc>
+                  <!-- L'élément lg doit avoir un attribut @type -->
+                  <constraintSpec ident="attReq" scheme="schematron">
+                     <constraint>
+                        <s:assert test="@type"/>
+                     </constraint>
+                  </constraintSpec>
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="org" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="uniform"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="sample" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="complete"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="met" mode="delete"/>
+                     <attDef ident="part" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="N"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="type" mode="change">
+                        <valList mode="add" type="open">
+                           <valItem ident="non_fixe"/>
+                           <valItem ident="ode_lyrique"/>
+                           <valItem ident="quatrain"/>
+                           <valItem ident="sonnet"/>
+                           <valItem ident="tercet"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="subtype" mode="change">
+                        <valList mode="add" type="open">
+                           <valItem ident="alexandrins"/>
+                           <valItem ident="decasyllabes"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               
+               
+               <!-- Modules obligatoires -->
+               <moduleRef key="tei"/>
+               <moduleRef key="core" include="p emph hi quote cit name rs address street postCode num date abbr expan head note analytic monogr series author respStmt resp title imprint publisher biblScope pubPlace bibl biblStruct listBibl l lg teiCorpus"/>
+               <moduleRef key="header" include="teiHeader fileDesc titleStmt editionStmt edition publicationStmt distributor idno availability licence seriesStmt sourceDesc biblFull encodingDesc projectDesc editorialDecl profileDesc creation langUsage language"/>
+               <moduleRef key="textstructure" include="TEI text body div1 div2 epigraph"/>
+               
+               <!-- Modules non obligatoires mais utilisés dans cet encodage -->
+               <moduleRef key="namesdates" include="persName surname forename placeName country settlement district listPerson listPlace person personGrp place"/>               
+               <moduleRef key="dictionaries" include="lang"/>               
+               <moduleRef key="verse" include="metDecl caesura rhyme"/>               
+               <moduleRef key="transcr" include="metamark"/>               
+               <moduleRef key="linking" include="seg"/>               
+               <moduleRef key="corpus" include="particDesc settingDesc"/>
+               
+               <!-- ELEMENTS SUPPRIMES DU SCHEMA ODD_NERVAL -->
+               <!-- Règles de validation de l'élément <hi/> -->
+               <elementSpec ident="hi" mode="delete"> <!-- élément supprimé du schéma ODD_Nerval -->
+                  <gloss>Mise en exergue stylistique</gloss> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <quote/> -->
+               <elementSpec ident="quote" mode="delete"> <!-- élément supprimé du schéma ODD_Nerval -->
+                  <gloss>Citation entre guillemets</gloss> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/> 
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="subtype" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <cit/> -->
+               <elementSpec ident="cit" mode="delete"> <!-- élément supprimé du schéma ODD_Nerval -->
+                  <gloss>Citation</gloss>
+                  <desc>Citation provenant d'un autre document comprenant la référence bibliographique de sa source. Dans un dictionnaire il peut contenir un exemple avec au moins une occurrence du mot employé dans l’acception qui est décrite, ou une traduction du mot-clé, ou un exemple.</desc>
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/> 
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="subtype" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <rs/> -->
+               <elementSpec ident="rs" mode="delete">
+                  <gloss>Chaîne de référence</gloss> <!-- élément supprimé du schéma ODD_Nerval -->
+                  <desc>Contient un nom générique ou une chaîne permettant de s'y référer.</desc> 
+                  <attList>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="subtype" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <seg/> -->
+               <elementSpec ident="seg" mode="delete"> <!-- élément supprimé du schéma ODD_Nerval-->
+                  <gloss>Segment quelconque</gloss> 
+                  <desc>contient une unité de texte quelconque de niveau ‘segment’.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="met" mode="delete"/>
+                     <attDef ident="rhyme" mode="delete"/>
+                     <attDef ident="part" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="N"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="type" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="couleur"/> <!-- envisagé initialement pour encoder les couleurs et conservé en mémoire dans le fichier XML source -->
+                        </valList>
+                     </attDef>
+                     <attDef ident="subtype" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="blanc"/>
+                           <valItem ident="gris"/>
+                           <valItem ident="jaune"/>
+                           <valItem ident="noir"/>
+                           <valItem ident="or"/>
+                           <valItem ident="rose"/>
+                           <valItem ident="rouge"/>
+                           <valItem ident="vert"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <epigraph/> -->
+               <elementSpec ident="epigraph" mode="delete"> <!-- Elément supprimé du schéma ODD_Nerval -->
+                  <gloss>Epigraphe</gloss>
+                  <desc>Contient une citation, anonyme ou attribuée et qui apparaît au début d’une section ou d’un chapitre ou sur une page de titre.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               
+               <!-- Eléments non modifiés -->        
+              
+              <!-- Règles de validation de l'élément <persName/> -->
+               <elementSpec ident="persName" mode="change">
+                  <gloss>Nom de personne</gloss> 
+                  <desc>Contient un nom propre ou une expression nominale se référant à une personne. L'élément est utilisé dans notre encodage dans cette capacité, servant à se référer tant à des noms propres qu'à des syntagmes nominaux faisant référence à un individu identifié, dans notre cas, par un index.</desc> 
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="corresp" mode="change"/> <!-- autoriser l'attribut @corresp dans <persName> -->
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="change"/> <!-- autoriser l'attribut @cert dans <persName> -->
+                     <attDef ident="when" mode="delete"/>
+                     <attDef ident="notBefore" mode="delete"/>
+                     <attDef ident="notAfter" mode="delete"/>
+                     <attDef ident="when-iso" mode="delete"/>
+                     <attDef ident="full" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="yes"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="subtype" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <name/> -->
+               <elementSpec ident="name" mode="change">
+                  <gloss>Nom ou nom propre</gloss> 
+                  <desc>Contient un nom propre ou un syntagme nominal.</desc> 
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="full" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="yes"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                     <attDef ident="when" mode="delete"/>
+                     <attDef ident="notBefore" mode="delete"/>
+                     <attDef ident="notAfter" mode="delete"/>
+                     <attDef ident="when-iso" mode="delete"/>
+                     <attDef ident="type" mode="change">
+                        <valList mode="add" type="closed"> <!-- spécification envisagée initialement pour encoder les instruments de musique --> 
+                           <valItem ident="inst_musique"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="subtype" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <surname/> -->
+               <elementSpec ident="surname" mode="change">
+                  <gloss>Nom de famille</gloss>
+                  <desc>Précise le nom de famille de la personne identifiée. Dans notre encodage, surtout employé pour spécifier l'identité d'auteurs d'ouvrages bibliographiques, dans les en-têtes.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="full" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="yes"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="subtype" mode="delete"/>
+                  </attList>                  
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <forename/> -->
+               <elementSpec ident="forename" mode="change">
+                  <gloss>Prénom</gloss> 
+                  <desc>Spécifie le prénom de la personne identifiée. Dans notre encodage, surtout employé pour spécifier l'identité d'auteurs d'ouvrages bibliographiques, dans les en-têtes.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="full" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="yes"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="subtype" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <placeName/> -->
+               <elementSpec ident="placeName" mode="change">
+                  <gloss>Nom de lieu, toponyme, absolu ou relatif.</gloss> 
+                  <desc>Il peut s'agir d'un nom propre comme d'un syntagne nominal moins précis.</desc> 
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="when" mode="delete"/>
+                     <attDef ident="notBefore" mode="delete"/>
+                     <attDef ident="notAfter" mode="delete"/>
+                     <attDef ident="when-iso" mode="delete"/>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="full" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="yes"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="subtype" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <country/> -->
+               <elementSpec ident="country" mode="change">
+                  <gloss>Nom de pays.</gloss> 
+                  <desc>Nom d'une entité géopolitique prédéfinie (pays, nation, etc.), plus grande qu'une région mais plus petite qu'un bloc. Notre encodage privilégie la catégorisation en tant que "pays".</desc> 
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="subtype" mode="delete"/>
+                     <attDef ident="when" mode="delete"/>
+                     <attDef ident="notBefore" mode="delete"/>
+                     <attDef ident="notAfter" mode="delete"/>
+                     <attDef ident="when-iso" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <settlement/> -->
+               <elementSpec ident="settlement" mode="change">
+                  <gloss>Nom de localité.</gloss> 
+                  <desc>Nom d'un lieu de peuplement comme une cité, une ville ou un village, identifié comme une unité géo-politique ou administrative unique. Employé dans notre encodage pour spécifier précisément l'adresse de la maison d'édition.</desc> 
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                     <attDef ident="type" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="city"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="subtype" mode="delete"/>
+                     <attDef ident="when" mode="delete"/>
+                     <attDef ident="notBefore" mode="delete"/>
+                     <attDef ident="notAfter" mode="delete"/>
+                     <attDef ident="when-iso" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <district/> -->
+               <elementSpec ident="district" mode="change">
+                  <gloss>Nom de sous-localité.</gloss> 
+                  <desc>Nom d'une subdivision quelconque d'une ville, comme une paroisse, une circonscription électorale ou toute autre unité administrative ou géographique. Employé dans notre encodage pour spécifier précisément l'adresse de la maison d'édition.</desc> 
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                     <attDef ident="type" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="arrondissement"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="subtype" mode="delete"/>
+                     <attDef ident="when" mode="delete"/>
+                     <attDef ident="notBefore" mode="delete"/>
+                     <attDef ident="notAfter" mode="delete"/>
+                     <attDef ident="when-iso" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <listPerson/> -->
+               <elementSpec ident="listPerson" mode="change">
+                  <gloss>Liste de personnes</gloss> 
+                  <desc>Index de personnes.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="subtype" mode="delete"/>
+                     <attDef ident="default" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="false"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <listPlace/> -->
+               <elementSpec ident="listPlace" mode="change">
+                  <gloss>Liste de lieux.</gloss> 
+                  <desc>Elément constitutif de l'index de lieux.</desc>
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="subtype" mode="delete"/>
+                     <attDef ident="default" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="false"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <personGrp/> -->
+               <elementSpec ident="personGrp" mode="change">
+                  <gloss>Groupe de personnes</gloss> 
+                  <desc>Décrit un groupe d'individus traité comme une personne unique à des fins d'analyse. Partie constitutive de l'index des personnes dans notre encodage.</desc>
+                  <attList>
+                     <attDef ident="role" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="historical"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="gender" mode="delete"/>
+                     <attDef ident="age" mode="delete"/>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <lang/> -->
+               <elementSpec ident="lang" mode="change">
+                  <gloss>Langue</gloss>
+                  <desc>Caractérise une langue ou une variété de langue utilisée dans un texte. Dans notre encodage, cet élément est amené à définir la langue du texte d'origine comme la langue dans laquelle s'effectue l'édition.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                  </attList>
+               </elementSpec>              
+              
+               <!-- Règles de validation de l'élément <p/> -->
+               <elementSpec ident="p" mode="change">
+                  <gloss>Paragraphe</gloss> 
+                  <desc>Marque les paragraphes dans un texte en prose. Utilisé essentiellement dans l'en-tête des documents entre des balises d'éléments n'admettant pas de texte brut.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="part" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="N"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <emph/> -->
+               <elementSpec ident="emph" mode="change">
+                  <gloss>Emphase</gloss> 
+                  <desc>Marque des mots ou des expressions qui sont accentués ou mis en valeur pour un motif linguistique ou rhétorique. Dans notre encodage, il s'agit essentiellement de termes mis en exergue typographiquement dans le texte source que notre approche imitative s'efforce de conserver (italiques, petites capitales).</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                  </attList>
+               </elementSpec>              
+               
+               
+               <!-- Règles de validation de l'élément <address/> -->
+               <elementSpec ident="address" mode="change">
+                  <gloss>Adresse postale</gloss> 
+                  <desc>Contient une adresse postale ou d'un autre type, par exemple l'adresse d'un éditeur, comme c'est le cas dans notre encodage.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <street/> -->
+               <elementSpec ident="street" mode="change">
+                  <gloss>Nom de rue</gloss> 
+                  <desc>Adresse complète d'une rue comprenant un nom ou un numéro identifiant un bâtiment ainsi que le nom de la rue ou du chemin sur laquelle il est situé. Dans notre encodage, cet élément est surtout employé dans le cas de la mention d'une adresse de maison d'édition.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <postCode/> -->
+               <elementSpec ident="postCode" mode="change">
+                  <gloss>Code postal</gloss> 
+                  <desc>Contient un code numérique ou alphanumérique qui fait partie de l'adresse postale.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <num/> -->
+               <elementSpec ident="num" mode="change">
+                  <gloss>Numéro de rue</gloss> 
+                  <attList>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="value" mode="delete"/>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="subtype" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <date/> -->
+               <elementSpec ident="date" mode="change">
+                  <gloss>Mention de date</gloss>
+                  <desc>Exprimée dans n'importe quel format (le format est défini par l'attribut choisi).</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="change" usage="rec"/> <!-- l'attribut @cert devient recommandé -->
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/> 
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="subtype" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <abbr/> -->
+               <elementSpec ident="abbr" mode="change">
+                  <gloss>Abréviation</gloss> 
+                  <desc>Contient une abréviation quelconque. Utilisé dans notre encodage de manière quelque peu détournée dans le cadre de l'élément metamark.</desc>
+                  <attList>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="subtype" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <expan/> -->
+               <elementSpec ident="expan" mode="change">
+                  <gloss>Expansion</gloss>
+                  <desc>Contient le développement d'une abréviation. Utilisé dans notre encodage de manière quelque peu détournée dans le cadre de l'élément metamark.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <head/> -->
+               <elementSpec ident="head" mode="change">
+                  <gloss>En-tête</gloss>
+                  <desc>Contient tout type d'en-tête, par exemple le titre d'une section, ou l'intitulé d'une liste, d'un glossaire, d'une description de manuscrit, etc. Dans notre encodage, cet élément est surtout employé pour spécifier des titres (d'oeuvre, de recueil, de poèmes).</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="subtype" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <note/> -->
+               <elementSpec ident="note" mode="change">
+                  <gloss>Note</gloss> 
+                  <desc>Contient une note ou une annotation.</desc>
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="subtype" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <analytic/> -->
+               <elementSpec ident="analytic" mode="change">
+                  <gloss>Niveau analytique (d'une bibliographie)</gloss> 
+                  <desc>Contient des éléments descriptifs qui décrivent la bibliographie d'une ressource (par exemple un poème ou un article de revue) publiée à l'intérieur d'une monographie ou d'une ressource et non publiée de façon indépendante. Dans le cas de notre encodage, il s'agit précisément du cas des recueils de poèmes, publiés à l'intérieur d'un autre ouvrage, lui-même recueil plus large (compilant généralement nouvelles en prose et poèmes).</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <monogr/> -->
+               <elementSpec ident="monogr" mode="change">
+                  <gloss>Niveau monographique</gloss> 
+                  <desc>Contient des données bibliographiques décrivant un objet (par exemple une monographie ou une revue) publié comme un élément indépendant (i.e. matériellement séparé). Dans le cas de notre encodage, il s'agit notamment du cas des ouvrages compilant nouvelles en prose et recueil de poèmes.</desc>
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <series/> -->
+               <elementSpec ident="series" mode="change">
+                  <gloss>Information sur la série</gloss> 
+                  <desc>Contient une information sur la série dans laquelle une monographie ou un autre élément bibliographique ont paru. Dans notre encodage, il s'agit notamment du cas de collections de monographies ou de revues périodiques.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <author/> -->
+               <elementSpec ident="author" mode="change">
+                  <gloss>Auteur</gloss> 
+                  <desc>Dans une référence bibliographique, contient le nom de la (des) personne(s) physique(s) ou du collectif, auteur(s) d'une oeuvre ; par exemple dans la même forme que celle utilisée par une référence bibliographique reconnue. </desc> 
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="when" mode="delete"/>
+                     <attDef ident="notBefore" mode="delete"/>
+                     <attDef ident="notAfter" mode="delete"/>
+                     <attDef ident="when-iso" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <respStmt/> -->
+               <elementSpec ident="respStmt" mode="change">
+                  <gloss>Mention de responsabilité</gloss> 
+                  <desc>Indique la responsabilité quant au contenu intellectuel d'un texte, d'une édition, d'un enregistrement ou d'une publication en série, lorsque les éléments spécifiques relatifs aux auteurs, éditeurs, etc. ne suffisent pas ou ne s'appliquent pas.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <resp/> -->
+               <elementSpec ident="resp" mode="change">
+                  <gloss>Responsabilité</gloss> 
+                  <desc>Contient une expression décrivant la nature de la responsabilité intellectuelle d'une personne.</desc> 
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                     <attDef ident="when" mode="delete"/>
+                     <attDef ident="notBefore" mode="delete"/>
+                     <attDef ident="notAfter" mode="delete"/>
+                     <attDef ident="when-iso" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <title/> -->
+               <elementSpec ident="title" mode="change">
+                  <gloss>Titre</gloss>
+                  <desc>Contient le titre complet d'une oeuvre quelconque.</desc> 
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="level" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="a"/>
+                           <valItem ident="j"/>
+                           <valItem ident="m"/>
+                           <valItem ident="s"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="subtype" mode="delete"/>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="when" mode="delete"/>
+                     <attDef ident="notBefore" mode="delete"/>
+                     <attDef ident="notAfter" mode="delete"/>
+                     <attDef ident="when-iso" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <imprint/> -->
+               <elementSpec ident="imprint" mode="change">
+                  <gloss>Impression</gloss> 
+                  <desc>Regroupe des informations relatives à la publication ou à la distribution d'un élément bibliographique.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <publisher/> -->
+               <elementSpec ident="publisher" mode="change">
+                  <gloss>Editeur</gloss>
+                  <desc>Donne le nom de l'organisme responsable de la publication ou de la distribution d'un élément de la bibliographie.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <biblScope/> -->
+               <elementSpec ident="biblScope" mode="change">
+                  <gloss>Extension d'une référence bibliographique</gloss> 
+                  <desc>Définit l'extension d'une référence bibliographique, comme par exemple une liste de numéros de page, ou le nom d'une subdivision d'une oeuvre plus grande.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="unit" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="book"/>
+                           <valItem ident="entry"/>
+                           <valItem ident="issue"/>
+                           <valItem ident="page"/>
+                           <valItem ident="part"/>
+                           <valItem ident="volume"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <pubPlace/> -->
+               <elementSpec ident="pubPlace" mode="change">
+                  <gloss>Lieu de publication</gloss>
+                  <desc>Contient le nom du lieu d'une publication, dans le cas de notre encodage, il peut s'agir soit d'un nom de ville, soit d'une adresse complète.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <bibl/> -->
+               <elementSpec ident="bibl" mode="change">
+                  <gloss>Référence bibliographique</gloss> 
+                  <desc>Contient une référence bibliographique faiblement structurée dans laquelle les sous-composants peuvent ou non être explicitement balisés.</desc> 
+                  <attList>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="default" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="false"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="subtype" mode="delete"/>
+                     <attDef ident="status" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="draft"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <biblStruct/> -->
+               <elementSpec ident="biblStruct" mode="change">
+                  <gloss>Référence bibliographique structurée</gloss> 
+                  <desc>Contient une référence bibliographique dans laquelle seuls des sous-éléments bibliographiques apparaissent et cela, selon un ordre déterminé.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="default" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="false"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="type" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="anthologie"/>
+                           <valItem ident="article"/>
+                           <valItem ident="encyclopedie"/>
+                           <valItem ident="recueil"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="subtype" mode="delete"/>
+                     <attDef ident="status" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="draft"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <listBibl/> -->
+               <elementSpec ident="listBibl" mode="change">
+                  <gloss>Liste de références bibliographiques</gloss> 
+                  <desc>Contient une liste de références bibliographiques de toute nature.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="default" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="false"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="subtype" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <l/> -->
+               <elementSpec ident="l" mode="change">
+                  <gloss>Vers</gloss> 
+                  <desc>Contient un seul vers, éventuellement incomplet.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="part" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="N"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <teiCorpus/> -->
+               <elementSpec ident="teiCorpus" mode="change">
+                  <gloss>teiCorpus, Corpus TEI</gloss> 
+                  <desc>Contient la totalité d'un corpus encodé selon la TEI, comprenant un seul en-tête de corpus et un ou plusieurs éléments TEI dont chacun contient un seul en-tête textuel et un texte.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="subtype" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <teiHeader/> -->
+               <elementSpec ident="teiHeader" mode="change">
+                  <gloss>teiHeader, en-tête TEI</gloss> 
+                  <desc>Fournit des informations descriptives et déclaratives qui constituent une page de titre électronique au début de tout texte conforme à la TEI. Il s'agit essentiellement du siège des métadonnées.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <fileDesc/> -->
+               <elementSpec ident="fileDesc" mode="change">
+                  <gloss>Description bibliographique du fichier</gloss> 
+                  <desc>Contient une description bibliographique complète du fichier électronique.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <titleStmt/> -->
+               <elementSpec ident="titleStmt" mode="change">
+                  <gloss>Mention de titre</gloss> 
+                  <desc>Regroupe les informations sur le titre d’une œuvre et les personnes ou institutions responsables de son contenu intellectuel.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <editionStmt/> -->
+               <elementSpec ident="editionStmt" mode="change">
+                  <gloss>Mention d'édition</gloss> 
+                  <desc>Regroupe les informations relatives à l’édition d’un texte.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <edition/> -->
+               <elementSpec ident="edition" mode="change">
+                  <gloss>Edition</gloss> 
+                  <desc>Décrit les particularités de l’édition d’un texte.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <publicationStmt/> -->
+               <elementSpec ident="publicationStmt" mode="change">
+                  <gloss>Mention de publication</gloss> 
+                  <desc>Regroupe des informations concernant la publication ou la diffusion d’un texte électronique ou d’un autre type de texte.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <distributor/> -->
+               <elementSpec ident="distributor" mode="change">
+                  <gloss>Diffuseur</gloss>
+                  <desc>Donne le nom d’une personne ou d’un organisme responsable de la diffusion d’un texte.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <idno/> -->
+               <elementSpec ident="idno" mode="change">
+                  <gloss>Identifiant</gloss> 
+                  <desc>Donne un identifiant standardisé qui peut être utilisé pour identifier une référence bibliographique, une personne, un titre d'ouvrage ou une organisation. Dans notre encodage, il s'agit du premier cas, et l'attribut de prédilection de cet élément est l'ISBN.</desc> 
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="type" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="ISBN"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="when" mode="delete"/>
+                     <attDef ident="notBefore" mode="delete"/>
+                     <attDef ident="notAfter" mode="delete"/>
+                     <attDef ident="when-iso" mode="delete"/>
+                     <attDef ident="type" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="ISBN"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="subtype" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <availability/> -->
+               <elementSpec ident="availability" mode="change">
+                  <gloss>Disponibilité</gloss>
+                  <desc>Renseigne sur la disponibilité du texte, par exemple sur toutes restrictions quant à son usage ou sa diffusion, son copyright, etc.</desc> 
+                  <attList>
+                     <attDef ident="status" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="free"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="default" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="false"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <licence/> -->
+               <elementSpec ident="licence" mode="change">
+                  <gloss>Licence</gloss>
+                  <desc>Contient des informations légales applicables au texte, notamment le contrat de licence définissant les droits d'utilisation.</desc> 
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="when" mode="delete"/>
+                     <attDef ident="notBefore" mode="delete"/>
+                     <attDef ident="notAfter" mode="delete"/>
+                     <attDef ident="when-iso" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <seriesStmt/> -->
+               <elementSpec ident="seriesStmt" mode="change">
+                  <gloss>Mention de collection</gloss> 
+                  <desc>Regroupe toute information relative à la collection (si elle existe) à laquelle appartient une publication. Employé de façon détournée dans notre encodage pour signifier un rapport de hiérarchie.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="default" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="false"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <sourceDesc/> -->
+               <elementSpec ident="sourceDesc" mode="change">
+                  <gloss>Description de la source</gloss> 
+                  <desc>Décrit la source à partir de laquelle un texte électronique a été dérivé ou produit, habituellement une description bibliographique pour un texte numérisé, ou une expression comme "document numérique natif " pour un texte qui n'a aucune existence précédente.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="default" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="false"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <biblFull/> -->
+               <elementSpec ident="biblFull" mode="change">
+                  <gloss>Référence bibliographique totalement structurée</gloss>
+                  <desc>Contient une référence bibliographique totalement structurée : tous les composants de la description du fichier TEI y sont présents.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="default" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="false"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="status" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="draft"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <encodingDesc/> -->
+               <elementSpec ident="encodingDesc" mode="change">
+                  <gloss>Description de l'encodage</gloss> 
+                  <desc>Documente la relation d'un texte électronique avec sa ou ses sources.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <projectDesc/> -->
+               <elementSpec ident="projectDesc" mode="change">
+                  <gloss>Description du projet d'encodage</gloss> 
+                  <desc>Décrit en détail le but ou l’objectif visé dans l’encodage d’un fichier électronique, ainsi que toute autre information pertinente sur la manière dont il a été construit ou recueilli.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="default" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="false"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <editorialDecl/> -->
+               <elementSpec ident="editorialDecl" mode="change">
+                  <gloss>Déclaration des pratiques éditoriales</gloss> 
+                  <desc>Donne des précisions sur les pratiques et les principes éditoriaux appliqués au cours de l’encodage du texte.</desc>
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="default" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="false"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <profileDesc/> -->
+               <elementSpec ident="profileDesc" mode="change">
+                  <gloss>Description du profil</gloss> 
+                  <desc>Fournit une description détaillée des aspects non bibliographiques du texte, notamment les langues utilisées et leurs variantes, les circonstances de sa production, les collaborateurs et leur statut.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <creation/> -->
+               <elementSpec ident="creation" mode="change">
+                  <gloss>Création</gloss> 
+                  <desc>Contient des informations concernant la création d’un texte.</desc>
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="when" mode="delete"/>
+                     <attDef ident="notBefore" mode="delete"/>
+                     <attDef ident="notAfter" mode="delete"/>
+                     <attDef ident="when-iso" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <langUsage/> -->
+               <elementSpec ident="langUsage" mode="change">
+                  <gloss>Langue utilisée</gloss> 
+                  <desc>Décrit les langues, variétés de langues, registres, dialectes, etc. présents à l’intérieur d’un texte.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="default" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="false"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <language/> -->
+               <elementSpec ident="language" mode="change">
+                  <gloss>Langue</gloss> 
+                  <desc>Caractérise une langue ou une variété de langue utilisée dans un texte.</desc> 
+                  <attList>
+                     <attDef ident="usage" mode="delete"/>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <metDecl/> -->
+               <elementSpec ident="metDecl" mode="change">
+                  <gloss>Déclaration sur la métrique</gloss>
+                  <desc>Documente la notation utilisée pour noter un modèle métrique lorsque celui-ci est spécifié.</desc> 
+                  <attList>
+                     <attDef ident="type" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="met"/>
+                           <valItem ident="real"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="pattern" mode="delete"/>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="default" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="false"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <caesura/> -->
+               <elementSpec ident="caesura" mode="change">
+                  <gloss>Césure</gloss> 
+                  <desc>Signale une coupe rythmique à l'intérieur d'un vers. Dans notre encodage, la césure est à entendre au sens conventionnel français en tant que coupe unique séparant le vers en deux hémistiches.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <rhyme/> -->
+               <elementSpec ident="rhyme" mode="change">
+                  <gloss>Rime</gloss> 
+                  <desc>Marque la partie rimante d'une ligne métrique.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="subtype" mode="delete"/>
+                  </attList>
+               </elementSpec>         
+               
+                <!-- Règles de validation de l'élément <metamark/> -->
+               <elementSpec ident="metamark" mode="change">
+                  <gloss>Méta-marque</gloss> 
+                  <desc>Contient toute forme de signe écrit dans le document dont la fonction est de guider la lecture orale. Dans notre encodage, nous avons adapté cet élément aux usages variés à la représentation des diérèses et autres licences poétiques, en modifiant l'orthographe de certains termes pour signifier au lecteur une prononciation spécifique.</desc> 
+                  <attList>
+                     <attDef ident="target" mode="delete"/>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <TEI/> -->
+               <elementSpec ident="TEI" mode="change">
+                  <gloss>Document TEI</gloss> 
+                  <desc>Contient un seul document conforme à la TEI, qui comprend un en-tête TEI et un texte, soit de façon isolée, soit comme partie d’un élément teiCorpus (comme c'est le cas dans notre encodage).</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="subtype" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <text/> -->
+               <elementSpec ident="text" mode="change">
+                  <gloss>Texte</gloss> 
+                  <desc>Contient un seul texte quelconque, simple ou composite, par exemple un poème ou une pièce de théâtre, un recueil d’essais, un roman, un dictionnaire ou un échantillon de corpus.</desc>
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="subtype" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <body/> -->
+               <elementSpec ident="body" mode="change">
+                  <gloss>Corps du texte</gloss> 
+                  <desc>Contient la totalité du corps d’un seul texte simple, à l’exclusion de toute partie pré- ou post-liminaire.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <particDesc/> -->
+               <elementSpec ident="particDesc" mode="change">
+                  <gloss>Description des participants</gloss> 
+                  <desc>Décrit les locuteurs, voix ou autres participants identifiables d'une interaction linguistique. Etendu dans notre encodage à tous les personnages mentionnés par leurs noms.</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="default" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="false"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Règles de validation de l'élément <settingDesc/> -->
+               <elementSpec ident="settingDesc" mode="change">
+                  <gloss>Description du contexte</gloss> 
+                  <desc>Décrit le(s) contexte(s) dans lesquels se situe une interaction linguistique, soit sous la forme d'une description en prose, soit sous celle d'une série d'éléments décrivant le contexte. Dans notre encodage, nous nous concentrons sur le contexte spatial (index des toponymes).</desc> 
+                  <attList>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="default" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="false"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               
+               <!-- Classes -->
+               <classRef key="att.textCritical"/>
+               <classRef key="model.rdgLike"/>
+               <classRef key="model.rdgPart"/>
+               <classRef key="model.physDescPart"/>
+               <classRef key="att.datable.iso"/>
+               <classRef key="model.persNamePart"/>
+               <classRef key="att.lexicographic"/>
+               <classRef key="model.entryLike"/>
+               <classRef key="model.formPart"/>
+               <classRef key="model.gramPart"/>
+               <classRef key="model.lexicalRefinement"/>
+               <classRef key="model.morphLike"/>
+               <classRef key="model.ptrLike.form"/>
+               <classRef key="att.combinable"/>
+               <classRef key="att.identified"/>
+               <classRef key="model.contentPart"/>
+               <classRef key="att.metrical"/>
+               <classRef key="att.global.facs"/>
+               <classRef key="att.global.linking"/> 
+               <classRef key="att.linguistic"/>
+               
+               
+               <!-- Spécifications de classes -->
+               <classSpec ident="att.textCritical" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="cause" mode="delete"/>
+                     <attDef ident="varSeq" mode="delete"/>
+                     <attDef ident="require" mode="delete"/>
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.datable.iso" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="notBefore-iso" mode="delete"/>
+                     <attDef ident="notAfter-iso" mode="delete"/>
+                     <attDef ident="from-iso" mode="delete"/>
+                     <attDef ident="to-iso" mode="delete"/>
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.lexicographic" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="expand" mode="delete"/>
+                     <attDef ident="split" mode="delete"/>
+                     <attDef ident="value" mode="delete"/>
+                     <attDef ident="location" mode="delete"/>
+                     <attDef ident="mergedIn" mode="delete"/>
+                  </attList>
+               </classSpec> 
+               <classSpec ident="att.combinable" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="mode" mode="delete"/>
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.identified" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="ident" mode="delete"/>
+                     <attDef ident="predeclare" mode="delete"/>
+                     <attDef ident="module" mode="delete"/>
+                  </attList>
+               </classSpec>               
+               <classSpec ident="att.anchoring" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="targetEnd" mode="delete"/>
+                  </attList>
+               </classSpec>               
+               <classSpec ident="att.ascribed.directed" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="toWhom" mode="delete"/>
+                  </attList>
+               </classSpec>               
+               <classSpec ident="att.dimensions" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="unit" mode="delete"/>
+                     <attDef ident="quantity" mode="delete"/>
+                     <attDef ident="extent" mode="delete"/>
+                     <attDef ident="precision" mode="delete"/>
+                     <attDef ident="scope" mode="delete"/>
+                  </attList>
+               </classSpec>               
+               <classSpec ident="att.damaged" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="agent" mode="delete"/>
+                     <attDef ident="degree" mode="delete"/>
+                     <attDef ident="group" mode="delete"/>
+                  </attList>
+               </classSpec>               
+               <classSpec ident="att.datable.w3c" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="from" mode="delete"/>
+                     <attDef ident="to" mode="delete"/>
+                  </attList>
+               </classSpec>               
+               <classSpec ident="att.datable" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="period" mode="delete"/>
+                  </attList>
+               </classSpec>               
+               <classSpec ident="att.global.responsibility" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="resp" mode="delete"/>
+                  </attList>
+               </classSpec>               
+               <classSpec ident="att.editLike" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="evidence" mode="delete"/>
+                  </attList>
+               </classSpec>               
+               <classSpec ident="att.media" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="width" mode="delete"/>
+                     <attDef ident="height" mode="delete"/>
+                     <attDef ident="scale" mode="delete"/>
+                  </attList>
+               </classSpec>               
+               <classSpec ident="att.naming" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="role" mode="delete"/>
+                     <attDef ident="nymRef" mode="delete"/>
+                  </attList>
+               </classSpec>               
+               <classSpec ident="att.pointing" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="targetLang" mode="delete"/>
+                     <attDef ident="evaluate" mode="delete"/>
+                  </attList>
+               </classSpec>               
+               <classSpec ident="att.pointing.group" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="domains" mode="delete"/>
+                     <attDef ident="targFunc" mode="delete"/>
+                  </attList>
+               </classSpec>               
+               <classSpec ident="att.segLike" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="function" mode="delete"/>
+                  </attList>
+               </classSpec>               
+               <classSpec ident="att.timed" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="start" mode="delete"/>
+                     <attDef ident="end" mode="delete"/>
+                  </attList>
+               </classSpec>               
+               <classSpec ident="att.transcriptional" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="status" mode="delete"/>
+                     <attDef ident="cause" mode="delete"/>
+                     <attDef ident="seq" mode="delete"/>
+                  </attList>
+               </classSpec>               
+               <classSpec ident="att.personal" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="sort" mode="delete"/>
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.metrical" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="real" mode="delete"/>
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.global.linking" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="synch" mode="delete"/>
+                     <attDef ident="copyOf" mode="delete"/>
+                     <attDef ident="next" mode="delete"/>
+                     <attDef ident="prev" mode="delete"/>
+                     <attDef ident="exclude" mode="delete"/>
+                     <attDef ident="select" mode="delete"/>
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.linguistic" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="lemma" mode="delete"/>
+                     <attDef ident="lemmaRef" mode="delete"/>
+                     <attDef ident="pos" mode="delete"/>
+                     <attDef ident="msd" mode="delete"/>
+                     <attDef ident="join" mode="delete"/>
+                  </attList>
+               </classSpec>
+               
+            </schemaSpec>
+         </div1>
+      </body>
+   </text>
+</TEI>
